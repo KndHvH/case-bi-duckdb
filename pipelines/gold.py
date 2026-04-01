@@ -5,7 +5,6 @@ class GoldPipeline:
         self.conn = conn
         
     def execute(self) -> None:
-        pass
         self._create_vw_fefo()
         self._create_vw_lote()
 
@@ -27,9 +26,8 @@ class GoldPipeline:
                 SELECT
                     id              AS id_lote,
                     id_sku,
-                    data_vencimento,
-                    valor_unitario,
                     quantidade,
+                    valor_unitario,
                     SUM(quantidade) OVER (
                         PARTITION BY id_sku
                         ORDER BY data_vencimento ASC
@@ -40,7 +38,6 @@ class GoldPipeline:
             acum_saida AS (
                 SELECT
                     id              AS id_saida,
-                    nf,
                     id_sku,
                     id_cliente,
                     id_local,
@@ -56,19 +53,16 @@ class GoldPipeline:
             )
             SELECT
                 s.id_saida,
-                s.nf,
-                s.id_sku,
                 s.id_cliente,
                 s.id_local,
-                s.data_venda,
+                s.data_venda::DATE  AS data_venda,
+                s.data_venda        AS datahora_venda,
                 e.id_lote,
-                e.data_vencimento,
-                e.valor_unitario                                                 AS custo_unitario,
                 LEAST(s.faixa_fim, e.faixa_fim) -
                 GREATEST(s.faixa_fim - s.quantidade, e.faixa_fim - e.quantidade) AS qtd_consumida,
                 (LEAST(s.faixa_fim, e.faixa_fim) -
                 GREATEST(s.faixa_fim - s.quantidade, e.faixa_fim - e.quantidade))
-                * e.valor_unitario                                               AS custo_total
+                * e.valor_unitario                                                AS custo_total
             FROM acum_saida s
             JOIN acum_entrada e
                 ON s.id_sku = e.id_sku
@@ -92,8 +86,9 @@ class GoldPipeline:
                 e.id                                AS id_lote,
                 e.id_sku,
                 e.id_fornecedor,
-                e.data_recebimento,
-                e.data_vencimento,
+                e.data_recebimento as datahora_recebimento,
+                e.data_recebimento::DATE as data_recebimento,
+                e.data_vencimento::DATE as data_vencimento,
                 e.valor_unitario,
                 e.quantidade                        AS quantidade_entrada,
                 COALESCE(v.quantidade_vendida, 0)   AS quantidade_vendida,

@@ -1,0 +1,137 @@
+table vw_lote
+	lineageTag: 554a5edd-cd69-4b6f-bbbf-3289c45fe69a
+
+	column id_lote
+		dataType: int64
+		formatString: 0
+		lineageTag: 09fefdb3-e8df-4d80-a3ef-7f2adb57ffe8
+		summarizeBy: none
+		sourceColumn: id_lote
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_sku
+		dataType: int64
+		formatString: 0
+		lineageTag: b41607c5-e8e0-4620-8ae2-8e8b89c091d1
+		summarizeBy: sum
+		sourceColumn: id_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_fornecedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d50ff02-9ac7-4b37-b3bb-d3c11e6bc155
+		summarizeBy: sum
+		sourceColumn: id_fornecedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_recebimento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4c4df9ed-d2d0-4390-b229-d2d22b55f1f4
+		summarizeBy: none
+		sourceColumn: data_recebimento
+
+		variation Variation
+			isDefault
+			relationship: a602767e-289c-44ee-813a-4a4b7bf917b7
+			defaultHierarchy: LocalDateTable_91f56bb2-645d-4e3c-9f7c-34e4984b6419.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_vencimento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b599fa00-6f7e-4ef5-b6cc-facb3185538f
+		summarizeBy: none
+		sourceColumn: data_vencimento
+
+		variation Variation
+			isDefault
+			relationship: 9f81af24-46f3-4f01-8819-80d10d253032
+			defaultHierarchy: LocalDateTable_ab3468bf-3416-4214-9eae-a568fbbc5620.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_unitario
+		dataType: double
+		lineageTag: f9df6b42-d79e-4e8d-8260-570af45707db
+		summarizeBy: sum
+		sourceColumn: valor_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quantidade_entrada
+		dataType: int64
+		formatString: 0
+		lineageTag: 9bae5b60-41d2-41ab-bb0a-9f7ca10e2e42
+		summarizeBy: sum
+		sourceColumn: quantidade_entrada
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade_vendida
+		dataType: double
+		lineageTag: afd2d8f1-711f-44dd-be12-b03a92e7ba8f
+		summarizeBy: sum
+		sourceColumn: quantidade_vendida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_vendido
+		dataType: double
+		lineageTag: 5fab8428-10fd-4bb8-8ebb-d14bf5e2490e
+		summarizeBy: sum
+		sourceColumn: valor_vendido
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quantidade_expirada
+		dataType: double
+		lineageTag: 596aa243-3dec-408f-964a-ceb791628af5
+		summarizeBy: sum
+		sourceColumn: quantidade_expirada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column valor_expirado
+		dataType: double
+		lineageTag: 694ec7a6-57d1-4b40-8a78-cc9b1d90011b
+		summarizeBy: sum
+		sourceColumn: valor_expirado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status
+		dataType: string
+		lineageTag: 51d9d498-544d-4930-b204-763c5742321d
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition vw_lote = m
+		mode: import
+		source =
+				let
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\gold\vw_lote.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

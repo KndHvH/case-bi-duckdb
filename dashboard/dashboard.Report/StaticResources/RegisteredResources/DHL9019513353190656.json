@@ -1,0 +1,27 @@
+{
+  "name": "DHL",
+  "dataColors": [
+    "#FFCC00",
+    "#D40511",
+    "#E0450C",
+    "#ED7009",
+    "#F49D04",
+    "#FCB004",
+    "#EEF524",
+    "#E01A42"
+  ],
+  "textClasses": {
+    "label": {
+      "fontFace": "Verdana"
+    },
+    "callout": {
+      "fontFace": "Verdana"
+    },
+    "title": {
+      "fontFace": "Verdana"
+    },
+    "header": {
+      "fontFace": "Verdana"
+    }
+  }
+}

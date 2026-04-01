@@ -23,9 +23,3 @@ silver.export()
 gold = GoldPipeline(conn)
 gold.execute()
 gold.export()
-
-
-
-
-
-

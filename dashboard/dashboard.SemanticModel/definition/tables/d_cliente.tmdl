@@ -1,0 +1,32 @@
+table d_cliente
+	lineageTag: 290b348e-48db-424d-9af1-82d67ce2c080
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 254ee7a9-8a5d-4018-b07c-adc87e0d513a
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: 6fde3e39-558e-48eb-904e-5dafed543a71
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_cliente = m
+		mode: import
+		source =
+				let
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\silver\d_cliente.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

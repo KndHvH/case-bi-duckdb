@@ -1,0 +1,126 @@
+table vw_fefo
+	lineageTag: ddcf8314-e111-4c21-adc6-58fd8aba89fe
+
+	column id_saida
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a1de9b9-ef64-40cc-b39c-981db2486af8
+		summarizeBy: sum
+		sourceColumn: id_saida
+
+		annotation SummarizationSetBy = Automatic
+
+	column nf
+		dataType: string
+		lineageTag: 915a5061-f866-479a-83ec-f444c01fb255
+		summarizeBy: none
+		sourceColumn: nf
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_sku
+		dataType: int64
+		formatString: 0
+		lineageTag: d8794f6f-aeb2-49a1-be8d-2d3a8a5844e8
+		summarizeBy: sum
+		sourceColumn: id_sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 8262104e-aaa7-42d6-9458-c08cea784ede
+		summarizeBy: sum
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_local
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d990290-02b0-496a-854f-56ce06e87d65
+		summarizeBy: sum
+		sourceColumn: id_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_venda
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d2a6b86-5516-4c47-b5f6-8be20bda9c55
+		summarizeBy: none
+		sourceColumn: data_venda
+
+		variation Variation
+			isDefault
+			relationship: 4a59c8e5-46e5-4cf0-83f9-f67f9d13269b
+			defaultHierarchy: LocalDateTable_c8f57f96-4aae-4373-90f8-b2e5c7bc1e6f.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_lote
+		dataType: int64
+		formatString: 0
+		lineageTag: 00b97906-c408-4c1c-ad59-3d1395747119
+		summarizeBy: none
+		sourceColumn: id_lote
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_vencimento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 10c88063-797c-4c82-a81f-bf97a2355649
+		summarizeBy: none
+		sourceColumn: data_vencimento
+
+		variation Variation
+			isDefault
+			relationship: 8939956b-9aee-4724-beae-ff394c2dbb97
+			defaultHierarchy: LocalDateTable_e5d3de4d-b029-44e3-836b-d12c70939cf8.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column custo_unitario
+		dataType: double
+		lineageTag: a68cbecf-3122-4be6-9d0d-e70616d0225d
+		summarizeBy: sum
+		sourceColumn: custo_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qtd_consumida
+		dataType: double
+		lineageTag: 2ffd1dbe-2928-4abd-bacc-4377aefbba78
+		summarizeBy: sum
+		sourceColumn: qtd_consumida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column custo_total
+		dataType: double
+		lineageTag: 80eaee8b-6028-46d9-844f-599e8814f2d7
+		summarizeBy: sum
+		sourceColumn: custo_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_fefo = m
+		mode: import
+		source =
+				let
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\gold\vw_fefo.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,40 @@
+table d_sku
+	lineageTag: dbe3638a-53af-4f99-b989-3ab39cac980b
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 696e9c36-fe2e-4e5b-afd3-e720c68a02cd
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku_original
+		dataType: string
+		lineageTag: 09a8e5d8-f73f-467b-929c-28e48ed62414
+		summarizeBy: none
+		sourceColumn: sku_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao
+		dataType: string
+		lineageTag: 79fca4df-3efb-4a8b-acc6-c274cfa21a65
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_sku = m
+		mode: import
+		source =
+				let
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\silver\d_sku.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

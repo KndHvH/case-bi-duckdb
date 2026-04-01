@@ -1,0 +1,24 @@
+relationship 4a59c8e5-46e5-4cf0-83f9-f67f9d13269b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_fefo.data_venda
+	toColumn: LocalDateTable_c8f57f96-4aae-4373-90f8-b2e5c7bc1e6f.Date
+
+relationship 8939956b-9aee-4724-beae-ff394c2dbb97
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_fefo.data_vencimento
+	toColumn: LocalDateTable_e5d3de4d-b029-44e3-836b-d12c70939cf8.Date
+
+relationship a602767e-289c-44ee-813a-4a4b7bf917b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_lote.data_recebimento
+	toColumn: LocalDateTable_91f56bb2-645d-4e3c-9f7c-34e4984b6419.Date
+
+relationship 9f81af24-46f3-4f01-8819-80d10d253032
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_lote.data_vencimento
+	toColumn: LocalDateTable_ab3468bf-3416-4214-9eae-a568fbbc5620.Date
+
+relationship AutoDetected_990e71d9-b620-40a3-94a2-326254ac4172
+	fromColumn: vw_fefo.id_lote
+	toColumn: vw_lote.id_lote
+

@@ -1,0 +1,40 @@
+table d_local
+	lineageTag: 02b11211-b3ee-4d5d-83b4-78c7e7777ee3
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: f2250529-15cf-4cf4-8f39-61c379e3eb23
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 482c6ba2-30f2-4ab9-9a9d-3f0d516c721f
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: b12362ae-d9e6-4cf5-bdb8-afe4d4599c07
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_local = m
+		mode: import
+		source =
+				let
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\silver\d_local.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
