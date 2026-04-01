@@ -38,12 +38,12 @@ class SilverPipeline:
             CREATE TABLE d_local AS
             SELECT
                 ROW_NUMBER() OVER () AS id,
-                UPPER(clean(cidade)) AS cidade,
-                UPPER(clean("UF"))   AS estado
+                cidade,
+                estado
             FROM (
                 SELECT DISTINCT
-                    "CIDADE" AS cidade,
-                    "UF"
+                    UPPER(clean("CIDADE")) AS cidade,
+                    UPPER(clean("UF"))     AS estado
                 FROM raw_expedicao
             )
         """)
@@ -165,8 +165,8 @@ class SilverPipeline:
             "d_cliente", 
             "d_fornecedor",
             "d_sku",
-            "f_entrada",
-            "f_saida",
+            # "f_entrada",
+            # "f_saida",
         ]
         for table in tables:
             self.conn.execute(f"""

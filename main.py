@@ -2,6 +2,7 @@ import os
 import duckdb
 from pipelines.bronze import BronzePipeline
 from pipelines.silver import SilverPipeline
+from pipelines.gold   import GoldPipeline
 
 db_path = "data/database.duckdb"
 
@@ -19,6 +20,9 @@ silver = SilverPipeline(conn)
 silver.execute()
 silver.export()
 
+gold = GoldPipeline(conn)
+gold.execute()
+gold.export()
 
 
 
