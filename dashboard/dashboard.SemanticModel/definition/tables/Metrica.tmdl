@@ -1,0 +1,49 @@
+table Metrica
+	lineageTag: de279002-4a6e-4f15-9ec9-f0851caa0d96
+
+	column Metrica
+		lineageTag: 1a6ec959-1168-48dd-a5f3-c79254360bba
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Metrica Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Metrica Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Metrica Campos'
+		isHidden
+		lineageTag: b83ef59c-a30b-4d66-8899-6d6ed0c69f16
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Metrica Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Metrica Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 347e57c0-d88c-4a6f-a552-23086f1ef8f9
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Metrica = calculated
+		mode: import
+		source =
+				{
+				    ("Quantidade vendida", NAMEOF('vw_fefo'[m_qtd_vendida]), 0),
+				    ("Ticket Médio", NAMEOF('vw_fefo'[m_tm]), 1),
+				    ("Valor Total", NAMEOF('vw_fefo'[m_total_vendido]), 2)
+				}
+
+	annotation PBI_Id = 9607f02e8b534fb7939bb11acea3ca11
+

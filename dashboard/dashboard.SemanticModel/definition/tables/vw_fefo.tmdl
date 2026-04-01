@@ -1,6 +1,21 @@
 table vw_fefo
 	lineageTag: ddcf8314-e111-4c21-adc6-58fd8aba89fe
 
+	measure m_total_vendido = SUM(vw_fefo[custo_total])
+		lineageTag: 50cedadd-51bc-4d74-b99f-5ee6f8e4271f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure m_qtd_vendida = SUM(vw_fefo[qtd_consumida])
+		lineageTag: b3d7d6fb-bdb9-4b66-b614-98208e4784ae
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure m_tm = DIVIDE([m_total_vendido],[m_qtd_vendida])
+		lineageTag: 806f7920-2cc0-4c25-bbf9-aef96d5e4f33
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column id_saida
 		dataType: int64
 		formatString: 0
@@ -10,28 +25,11 @@ table vw_fefo
 
 		annotation SummarizationSetBy = Automatic
 
-	column nf
-		dataType: string
-		lineageTag: 915a5061-f866-479a-83ec-f444c01fb255
-		summarizeBy: none
-		sourceColumn: nf
-
-		annotation SummarizationSetBy = Automatic
-
-	column id_sku
-		dataType: int64
-		formatString: 0
-		lineageTag: d8794f6f-aeb2-49a1-be8d-2d3a8a5844e8
-		summarizeBy: sum
-		sourceColumn: id_sku
-
-		annotation SummarizationSetBy = Automatic
-
 	column id_cliente
 		dataType: int64
 		formatString: 0
 		lineageTag: 8262104e-aaa7-42d6-9458-c08cea784ede
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id_cliente
 
 		annotation SummarizationSetBy = Automatic
@@ -40,22 +38,8 @@ table vw_fefo
 		dataType: int64
 		formatString: 0
 		lineageTag: 4d990290-02b0-496a-854f-56ce06e87d65
-		summarizeBy: sum
-		sourceColumn: id_local
-
-		annotation SummarizationSetBy = Automatic
-
-	column data_venda
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 5d2a6b86-5516-4c47-b5f6-8be20bda9c55
 		summarizeBy: none
-		sourceColumn: data_venda
-
-		variation Variation
-			isDefault
-			relationship: 4a59c8e5-46e5-4cf0-83f9-f67f9d13269b
-			defaultHierarchy: LocalDateTable_c8f57f96-4aae-4373-90f8-b2e5c7bc1e6f.'Hierarquia de datas'
+		sourceColumn: id_local
 
 		annotation SummarizationSetBy = Automatic
 
@@ -67,30 +51,6 @@ table vw_fefo
 		sourceColumn: id_lote
 
 		annotation SummarizationSetBy = Automatic
-
-	column data_vencimento
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 10c88063-797c-4c82-a81f-bf97a2355649
-		summarizeBy: none
-		sourceColumn: data_vencimento
-
-		variation Variation
-			isDefault
-			relationship: 8939956b-9aee-4724-beae-ff394c2dbb97
-			defaultHierarchy: LocalDateTable_e5d3de4d-b029-44e3-836b-d12c70939cf8.'Hierarquia de datas'
-
-		annotation SummarizationSetBy = Automatic
-
-	column custo_unitario
-		dataType: double
-		lineageTag: a68cbecf-3122-4be6-9d0d-e70616d0225d
-		summarizeBy: sum
-		sourceColumn: custo_unitario
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column qtd_consumida
 		dataType: double
@@ -111,6 +71,31 @@ table vw_fefo
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column datahora_venda
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 632a579c-7cb4-4dd5-9b49-5d5484cbaf93
+		summarizeBy: none
+		sourceColumn: datahora_venda
+
+		variation Variation
+			isDefault
+			relationship: f1432760-9789-404f-bd10-a3d6ed16e629
+			defaultHierarchy: LocalDateTable_fe15d71f-f4ee-4f6c-873f-1a2541d5668d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_venda
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a6a92d14-22ed-4afa-9799-6e1ae35dbbe3
+		summarizeBy: none
+		sourceColumn: data_venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition vw_fefo = m
 		mode: import

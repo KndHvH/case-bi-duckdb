@@ -14,7 +14,7 @@ table vw_lote
 		dataType: int64
 		formatString: 0
 		lineageTag: b41607c5-e8e0-4620-8ae2-8e8b89c091d1
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id_sku
 
 		annotation SummarizationSetBy = Automatic
@@ -23,36 +23,8 @@ table vw_lote
 		dataType: int64
 		formatString: 0
 		lineageTag: 5d50ff02-9ac7-4b37-b3bb-d3c11e6bc155
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id_fornecedor
-
-		annotation SummarizationSetBy = Automatic
-
-	column data_recebimento
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: 4c4df9ed-d2d0-4390-b229-d2d22b55f1f4
-		summarizeBy: none
-		sourceColumn: data_recebimento
-
-		variation Variation
-			isDefault
-			relationship: a602767e-289c-44ee-813a-4a4b7bf917b7
-			defaultHierarchy: LocalDateTable_91f56bb2-645d-4e3c-9f7c-34e4984b6419.'Hierarquia de datas'
-
-		annotation SummarizationSetBy = Automatic
-
-	column data_vencimento
-		dataType: dateTime
-		formatString: General Date
-		lineageTag: b599fa00-6f7e-4ef5-b6cc-facb3185538f
-		summarizeBy: none
-		sourceColumn: data_vencimento
-
-		variation Variation
-			isDefault
-			relationship: 9f81af24-46f3-4f01-8819-80d10d253032
-			defaultHierarchy: LocalDateTable_ab3468bf-3416-4214-9eae-a568fbbc5620.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -122,6 +94,47 @@ table vw_lote
 		sourceColumn: status
 
 		annotation SummarizationSetBy = Automatic
+
+	column datahora_recebimento
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c446471c-872b-404e-b3f7-f0c46babfde9
+		summarizeBy: none
+		sourceColumn: datahora_recebimento
+
+		variation Variation
+			isDefault
+			relationship: 32492319-086e-4bc4-8973-651d4c96dde1
+			defaultHierarchy: LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_recebimento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 07200418-b8d7-4ac0-a937-2a019df6ecf3
+		summarizeBy: none
+		sourceColumn: data_recebimento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_vencimento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 42af5c8a-c881-4715-bb40-2c16fa260f69
+		summarizeBy: none
+		sourceColumn: data_vencimento
+
+		variation Variation
+			isDefault
+			relationship: 00a498e2-a2ae-49ff-ba39-40f782add014
+			defaultHierarchy: LocalDateTable_251dbf71-9753-4c4a-9a0c-bfe308aa4f81.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition vw_lote = m
 		mode: import

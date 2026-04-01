@@ -5,7 +5,7 @@ table d_sku
 		dataType: int64
 		formatString: 0
 		lineageTag: 696e9c36-fe2e-4e5b-afd3-e720c68a02cd
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id
 
 		annotation SummarizationSetBy = Automatic

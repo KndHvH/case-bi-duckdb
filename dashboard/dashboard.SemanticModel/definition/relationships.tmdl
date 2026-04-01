@@ -1,24 +1,49 @@
-relationship 4a59c8e5-46e5-4cf0-83f9-f67f9d13269b
-	joinOnDateBehavior: datePartOnly
-	fromColumn: vw_fefo.data_venda
-	toColumn: LocalDateTable_c8f57f96-4aae-4373-90f8-b2e5c7bc1e6f.Date
-
-relationship 8939956b-9aee-4724-beae-ff394c2dbb97
-	joinOnDateBehavior: datePartOnly
-	fromColumn: vw_fefo.data_vencimento
-	toColumn: LocalDateTable_e5d3de4d-b029-44e3-836b-d12c70939cf8.Date
-
-relationship a602767e-289c-44ee-813a-4a4b7bf917b7
-	joinOnDateBehavior: datePartOnly
-	fromColumn: vw_lote.data_recebimento
-	toColumn: LocalDateTable_91f56bb2-645d-4e3c-9f7c-34e4984b6419.Date
-
-relationship 9f81af24-46f3-4f01-8819-80d10d253032
-	joinOnDateBehavior: datePartOnly
-	fromColumn: vw_lote.data_vencimento
-	toColumn: LocalDateTable_ab3468bf-3416-4214-9eae-a568fbbc5620.Date
-
 relationship AutoDetected_990e71d9-b620-40a3-94a2-326254ac4172
 	fromColumn: vw_fefo.id_lote
 	toColumn: vw_lote.id_lote
+
+relationship 65f767b1-45c3-e06a-7487-90ad63d000ce
+	fromColumn: vw_fefo.id_cliente
+	toColumn: d_cliente.id
+
+relationship f1a7b33c-5abc-47fa-6961-fda984484f13
+	fromColumn: vw_fefo.id_local
+	toColumn: d_local.id
+
+relationship 8bd6da22-8a5c-1fa4-b5e0-f9b8005db97c
+	fromColumn: vw_lote.id_fornecedor
+	toColumn: d_fornecedor.id
+
+relationship 49dfe507-5083-f334-8c92-08782bdb28df
+	fromColumn: vw_lote.id_sku
+	toColumn: d_sku.id
+
+relationship f1432760-9789-404f-bd10-a3d6ed16e629
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_fefo.datahora_venda
+	toColumn: LocalDateTable_fe15d71f-f4ee-4f6c-873f-1a2541d5668d.Date
+
+relationship 32492319-086e-4bc4-8973-651d4c96dde1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_lote.datahora_recebimento
+	toColumn: LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6.Date
+
+relationship 00a498e2-a2ae-49ff-ba39-40f782add014
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_lote.data_vencimento
+	toColumn: LocalDateTable_251dbf71-9753-4c4a-9a0c-bfe308aa4f81.Date
+
+relationship a35baa9a-d249-47db-8e67-329436bd0577
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_calendar.Date
+	toColumn: LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e.Date
+
+relationship 8ad0a56c-b943-989a-34ab-b51afd6c8d66
+	fromColumn: vw_fefo.data_venda
+	toColumn: d_calendar.Date
+
+relationship 0eecf9c5-931c-9b9b-c3d8-a79f33eec567
+	isActive: false
+	fromColumn: vw_lote.data_recebimento
+	toColumn: d_calendar.Date
 

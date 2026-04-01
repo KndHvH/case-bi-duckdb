@@ -14,15 +14,17 @@ annotation PBI_QueryOrder = ["vw_fefo","vw_lote","d_fornecedor","d_local","d_sku
 
 ref table vw_fefo
 ref table DateTableTemplate_bc581a42-e26d-4691-9b89-c75407867fb1
-ref table LocalDateTable_c8f57f96-4aae-4373-90f8-b2e5c7bc1e6f
-ref table LocalDateTable_e5d3de4d-b029-44e3-836b-d12c70939cf8
 ref table vw_lote
-ref table LocalDateTable_91f56bb2-645d-4e3c-9f7c-34e4984b6419
-ref table LocalDateTable_ab3468bf-3416-4214-9eae-a568fbbc5620
 ref table d_fornecedor
 ref table d_local
 ref table d_sku
 ref table d_cliente
+ref table d_calendar
+ref table LocalDateTable_fe15d71f-f4ee-4f6c-873f-1a2541d5668d
+ref table LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6
+ref table LocalDateTable_251dbf71-9753-4c4a-9a0c-bfe308aa4f81
+ref table LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e
+ref table Metrica
 
 ref cultureInfo pt-BR
 

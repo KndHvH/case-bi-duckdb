@@ -1,0 +1,145 @@
+table d_calendar
+	lineageTag: ff5b6020-9951-49b3-b4f6-6e58d3ed271c
+
+	column Date
+		formatString: General Date
+		lineageTag: 46cbf3b2-e3cd-4ebb-b92d-bdcc2205ea0f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: a35baa9a-d249-47db-8e67-329436bd0577
+			defaultHierarchy: LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		formatString: 0
+		lineageTag: d23847d9-0444-4a63-9a72-12c41fc307d3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		formatString: 0
+		lineageTag: 53d8ed8c-d518-4248-9249-e82bfa29295e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter_name
+		lineageTag: 9b2585a3-aa07-435b-b9d1-b5764d306332
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [quarter_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		formatString: 0
+		lineageTag: 2dc1b026-3902-4098-98a4-1816a0e5f7a5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		lineageTag: a2bde501-c096-4aba-86c9-9873681c1c9a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [month_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_number
+		formatString: 0
+		lineageTag: 83d7acc8-4994-4c1b-a0ee-686235760186
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [week_number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_name
+		lineageTag: b064e891-189b-4b97-9fdc-7b8de83e758a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [week_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_month
+		formatString: 0
+		lineageTag: fab73f6f-a4cb-4213-a707-62f43bec7f9e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [day_of_month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_of_week
+		formatString: 0
+		lineageTag: c3217cf1-91e6-4002-84e5-13a92381ecee
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [day_of_week]
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name
+		lineageTag: 1b3a9410-45eb-4af3-a5e7-66fec9d3a31a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [day_name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column day_name_short
+		lineageTag: 002bd99b-5e65-4261-8faa-2b74ecf6e861
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [day_name_short]
+
+		annotation SummarizationSetBy = Automatic
+
+	column full_date
+		lineageTag: f3fca12e-74c9-4b39-a212-ff11be4aa2dd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [full_date]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_calendar = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        MIN(vw_lote[data_recebimento]), 
+				        MAX(vw_fefo[data_venda])
+				    ),
+				    "year",             YEAR([Date]),
+				    "quarter",          QUARTER([Date]),
+				    "quarter_name",     "T" & QUARTER([Date]),
+				    "month",            MONTH([Date]),
+				    "month_name",       FORMAT([Date], "MMMM"),
+				    "week_number",      WEEKNUM([Date], 2),         
+				    "week_name",        "Semana " & WEEKNUM([Date], 2),
+				    "day_of_month",     DAY([Date]),
+				    "day_of_week",      WEEKDAY([Date], 2),
+				    "day_name",         FORMAT([Date], "DDDD"),
+				    "day_name_short",   FORMAT([Date], "DDD"),
+				    "full_date",        FORMAT([Date], "DD/MM")
+				)
+				```
+
+	annotation PBI_Id = bcf9ef6ec8954678a71b4e958bb70c68
+

@@ -5,7 +5,7 @@ table d_fornecedor
 		dataType: int64
 		formatString: 0
 		lineageTag: 9ba8797f-3546-42bb-a19e-2c9cd1af61b2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id
 
 		annotation SummarizationSetBy = Automatic

@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 201,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1212,
+            "y": 104
+          },
+          "nodeIndex": "d_cliente",
+          "nodeLineageTag": "290b348e-48db-424d-9af1-82d67ce2c080",
+          "size": {
+            "height": 214,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 587,
+            "y": 0
+          },
+          "nodeIndex": "d_fornecedor",
+          "nodeLineageTag": "e3279c48-c37f-48ec-be34-1842eef5e93d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1375,
+            "y": 372
+          },
+          "nodeIndex": "d_local",
+          "nodeLineageTag": "02b11211-b3ee-4d5d-83b4-78c7e7777ee3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 322,
+            "y": 0
+          },
+          "nodeIndex": "d_sku",
+          "nodeLineageTag": "dbe3638a-53af-4f99-b989-3ab39cac980b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 767,
+            "y": 364
+          },
+          "nodeIndex": "vw_fefo",
+          "nodeLineageTag": "ddcf8314-e111-4c21-adc6-58fd8aba89fe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 83
+          },
+          "nodeIndex": "vw_lote",
+          "nodeLineageTag": "554a5edd-cd69-4b6f-bbbf-3289c45fe69a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 531.5
+          },
+          "nodeIndex": "d_calendar",
+          "nodeLineageTag": "ff5b6020-9951-49b3-b4f6-6e58d3ed271c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1659,
+            "y": 289.75
+          },
+          "nodeIndex": "Metrica",
+          "nodeLineageTag": "de279002-4a6e-4f15-9ec9-f0851caa0d96",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

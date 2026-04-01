@@ -5,7 +5,7 @@ table d_local
 		dataType: int64
 		formatString: 0
 		lineageTag: f2250529-15cf-4cf4-8f39-61c379e3eb23
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id
 
 		annotation SummarizationSetBy = Automatic
