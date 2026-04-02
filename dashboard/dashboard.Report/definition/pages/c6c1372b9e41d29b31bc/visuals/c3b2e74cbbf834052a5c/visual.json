@@ -175,6 +175,21 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "vw_fefo"
+                    }
+                  },
+                  "Property": "m_valor_vendido"
+                }
+              },
+              "queryRef": "vw_fefo.m_valor_vendido",
+              "nativeQueryRef": "Valor Vendido",
+              "displayName": "Valor Vendido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "vw_lote"
                     }
                   },
@@ -336,7 +351,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "275.09280690694555D"
+                  "Value": "190.6752280139042D"
                 }
               }
             }
@@ -392,7 +407,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "127.22222222222223D"
+                  "Value": "100.60009136133122D"
                 }
               }
             }
@@ -406,7 +421,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "134.88888861281458D"
+                  "Value": "118.20831941885845D"
                 }
               }
             }
@@ -469,6 +484,20 @@
           },
           "selector": {
             "metadata": "Sum(vw_lote.valor_unitario)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "126D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_valor_vendido"
           }
         }
       ],
@@ -639,6 +668,27 @@
           },
           "selector": {
             "metadata": "vw_lote.m_valor_estoque"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_valor_vendido"
           }
         }
       ]

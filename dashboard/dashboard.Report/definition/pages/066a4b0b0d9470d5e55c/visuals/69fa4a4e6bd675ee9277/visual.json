@@ -3,10 +3,10 @@
   "name": "69fa4a4e6bd675ee9277",
   "position": {
     "x": 0,
-    "y": 468.53253508462421,
+    "y": 468.86542726613044,
     "z": 2000,
-    "height": 251.74882482158912,
-    "width": 1600.2367429631568,
+    "height": 251.17790746399845,
+    "width": 1600.2125854685569,
     "tabOrder": 2000
   },
   "visual": {
@@ -17,55 +17,99 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "d_calendar"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
+                    "SourceRef": {
+                      "Entity": "d_calendar"
                     }
                   },
-                  "Level": "Mês"
+                  "Property": "year"
                 }
               },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Mês",
-              "nativeQueryRef": "Date Mês",
-              "active": true
+              "queryRef": "d_calendar.year",
+              "nativeQueryRef": "Ano",
+              "active": false,
+              "displayName": "Ano"
             },
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "d_calendar"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
+                    "SourceRef": {
+                      "Entity": "d_calendar"
                     }
                   },
-                  "Level": "Dia"
+                  "Property": "quarter_name"
                 }
               },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Dia",
-              "nativeQueryRef": "Date Dia",
-              "active": false
+              "queryRef": "d_calendar.quarter_name",
+              "nativeQueryRef": "Tri",
+              "active": false,
+              "displayName": "Tri"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_calendar"
+                    }
+                  },
+                  "Property": "month_name"
+                }
+              },
+              "queryRef": "d_calendar.month_name",
+              "nativeQueryRef": "Mês",
+              "active": true,
+              "displayName": "Mês"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_calendar"
+                    }
+                  },
+                  "Property": "week_name"
+                }
+              },
+              "queryRef": "d_calendar.week_name",
+              "nativeQueryRef": "Semana",
+              "active": false,
+              "displayName": "Semana"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_calendar"
+                    }
+                  },
+                  "Property": "day_name"
+                }
+              },
+              "queryRef": "d_calendar.day_name",
+              "nativeQueryRef": "Dia semana",
+              "active": false,
+              "displayName": "Dia semana"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "d_calendar"
+                    }
+                  },
+                  "Property": "day_of_month"
+                }
+              },
+              "queryRef": "d_calendar.day_of_month",
+              "nativeQueryRef": "Dia",
+              "active": false,
+              "displayName": "Dia"
             }
           ]
         },
@@ -257,6 +301,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

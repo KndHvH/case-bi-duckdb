@@ -10,7 +10,7 @@ table d_calendar
 
 		variation Variation
 			isDefault
-			relationship: 8f7dc3f2-e031-4959-8faf-713ee21843b4
+			relationship: 0e1f1294-fcef-4620-adaa-0d07f0e04807
 			defaultHierarchy: LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
@@ -38,6 +38,7 @@ table d_calendar
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [quarter_name]
+		sortByColumn: quarter
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,6 +56,7 @@ table d_calendar
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [month_name]
+		sortByColumn: month
 
 		annotation SummarizationSetBy = Automatic
 
@@ -72,6 +74,7 @@ table d_calendar
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [week_name]
+		sortByColumn: week_number
 
 		annotation SummarizationSetBy = Automatic
 
@@ -98,6 +101,7 @@ table d_calendar
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [day_name]
+		sortByColumn: day_of_week
 
 		annotation SummarizationSetBy = Automatic
 
@@ -131,8 +135,8 @@ table d_calendar
 				    "quarter_name",     "T" & QUARTER([Date]),
 				    "month",            MONTH([Date]),
 				    "month_name",       FORMAT([Date], "MMMM"),
-				    "week_number",      WEEKNUM([Date], 2),         
-				    "week_name",        "Semana " & WEEKNUM([Date], 2),
+				    "week_number", WEEKNUM([Date], 2) - WEEKNUM(DATE(YEAR([Date]), MONTH([Date]), 1), 2) + 1,
+				    "week_name",   "Semana " & WEEKNUM([Date], 2) - WEEKNUM(DATE(YEAR([Date]), MONTH([Date]), 1), 2) + 1,
 				    "day_of_month",     DAY([Date]),
 				    "day_of_week",      WEEKDAY([Date], 2),
 				    "day_name",         FORMAT([Date], "DDDD"),

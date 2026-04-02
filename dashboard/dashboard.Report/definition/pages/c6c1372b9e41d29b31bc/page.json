@@ -50,6 +50,45 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "d_sku",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "descricao"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'TAPIOCA 12X500G'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "Drillthrough"
       },
       {
@@ -113,51 +152,6 @@
         "howCreated": "Drillthrough"
       },
       {
-        "name": "1c77ed0c6abef38aa16a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "e053ff8fd5017f51cbc6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "6d3717bd4e2b9f97225e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
         "name": "7c9b30ece9f7284ab9c5",
         "field": {
           "Column": {
@@ -173,91 +167,135 @@
         "howCreated": "Drillthrough"
       },
       {
-        "name": "c0c481e2e5a5724a3a02",
+        "name": "41362ced8c8b8b7f4b0f",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Mês"
+            "Property": "year"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "l",
-              "Entity": "LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "l"
-                          }
-                        },
-                        "Property": "Mês"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'agosto'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       },
       {
-        "name": "5a1c8576d3e60449d867",
+        "name": "2cd65b357734cd97cce7",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Dia"
+            "Property": "week_number"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "87927f9d9a246c22e38d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "week_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "110b0328559ce5c91f14",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "quarter_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "67d22d77a62f72de2309",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "month_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "3b1da5773a868566852d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "full_date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "020c89d9c7b11e377bdd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "af3d90f99b7d4263ef2d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "69d4511484563b3d9ce1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_name"
           }
         },
         "type": "Categorical",
@@ -368,48 +406,6 @@
         }
       },
       {
-        "name": "fa18343b8a3f5f5ae7cc",
-        "boundFilter": "1c77ed0c6abef38aa16a",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
-        "name": "eb757f64ddb1eee65138",
-        "boundFilter": "e053ff8fd5017f51cbc6",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
-        "name": "4b6eec65a1b26f41f9b6",
-        "boundFilter": "6d3717bd4e2b9f97225e",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
         "name": "110c841d0797728d1809",
         "boundFilter": "7c9b30ece9f7284ab9c5",
         "fieldExpr": {
@@ -424,52 +420,146 @@
         }
       },
       {
-        "name": "7bf7469385590305a126",
-        "boundFilter": "c0c481e2e5a5724a3a02",
+        "name": "f11ed7ffbd0d5bb55ce9",
+        "boundFilter": "41362ced8c8b8b7f4b0f",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Mês"
+            "Property": "year"
           }
         }
       },
       {
-        "name": "810fb20bb5baf0e83287",
-        "boundFilter": "5a1c8576d3e60449d867",
+        "name": "67d20d8e8956b65383b3",
+        "boundFilter": "2cd65b357734cd97cce7",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Dia"
+            "Property": "week_number"
+          }
+        }
+      },
+      {
+        "name": "6fdc348462ba03dacb5c",
+        "boundFilter": "87927f9d9a246c22e38d",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "week_name"
+          }
+        }
+      },
+      {
+        "name": "76676b36a8348fd9f14d",
+        "boundFilter": "110b0328559ce5c91f14",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "quarter_name"
+          }
+        }
+      },
+      {
+        "name": "2eb757d2213c5de5375e",
+        "boundFilter": "67d22d77a62f72de2309",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "month_name"
+          }
+        }
+      },
+      {
+        "name": "9cf718bb30c34026ab26",
+        "boundFilter": "3b1da5773a868566852d",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "full_date"
+          }
+        }
+      },
+      {
+        "name": "43c82380ec85c3eef0e1",
+        "boundFilter": "020c89d9c7b11e377bdd",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_week"
+          }
+        }
+      },
+      {
+        "name": "00ab2e3c4afd54978e1d",
+        "boundFilter": "af3d90f99b7d4263ef2d",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_month"
+          }
+        }
+      },
+      {
+        "name": "fa1d97c8cbfd6e293ddb",
+        "boundFilter": "69d4511484563b3d9ce1",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_name"
           }
         }
       }

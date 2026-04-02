@@ -107,51 +107,6 @@
         "howCreated": "Drillthrough"
       },
       {
-        "name": "1c77ed0c6abef38aa16a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "e053ff8fd5017f51cbc6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "6d3717bd4e2b9f97225e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
         "name": "7c9b30ece9f7284ab9c5",
         "field": {
           "Column": {
@@ -161,6 +116,111 @@
               }
             },
             "Property": "full_date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "ada0600384dc25c9e7a1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "year"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "7145fea7e660caac6a19",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "week_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "37a344aa6419802cbff1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "quarter_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "b75e8d9f080d0fe001ec",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "month_name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "f591e8f9b0593ab898e8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_week"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "3a76cf5e58ad51bd5476",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "9c7bdf44043edd3d1b6d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_name"
           }
         },
         "type": "Categorical",
@@ -229,48 +289,6 @@
         }
       },
       {
-        "name": "fa18343b8a3f5f5ae7cc",
-        "boundFilter": "1c77ed0c6abef38aa16a",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
-        "name": "eb757f64ddb1eee65138",
-        "boundFilter": "e053ff8fd5017f51cbc6",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
-        "name": "4b6eec65a1b26f41f9b6",
-        "boundFilter": "6d3717bd4e2b9f97225e",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "Date"
-          }
-        }
-      },
-      {
         "name": "110c841d0797728d1809",
         "boundFilter": "7c9b30ece9f7284ab9c5",
         "fieldExpr": {
@@ -281,6 +299,118 @@
               }
             },
             "Property": "full_date"
+          }
+        }
+      },
+      {
+        "name": "5a5010517dc3e8f9fb30",
+        "boundFilter": "ada0600384dc25c9e7a1",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "year"
+          }
+        }
+      },
+      {
+        "name": "f60f9419eda161f6da24",
+        "boundFilter": "7145fea7e660caac6a19",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "week_name"
+          }
+        }
+      },
+      {
+        "name": "4f40ceb47ea66930bf43",
+        "boundFilter": "37a344aa6419802cbff1",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "quarter_name"
+          }
+        }
+      },
+      {
+        "name": "37856fe903bf5e07bab6",
+        "boundFilter": "b75e8d9f080d0fe001ec",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "month_name"
+          }
+        }
+      },
+      {
+        "name": "9eb6c71ed0274d472131",
+        "boundFilter": "f591e8f9b0593ab898e8",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_week"
+          }
+        }
+      },
+      {
+        "name": "efc5c304562e445231dc",
+        "boundFilter": "3a76cf5e58ad51bd5476",
+        "asAggregation": true,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_of_month"
+          }
+        }
+      },
+      {
+        "name": "9f5271d1e5325f22f317",
+        "boundFilter": "9c7bdf44043edd3d1b6d",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "day_name"
           }
         }
       }

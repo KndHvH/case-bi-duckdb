@@ -33,7 +33,7 @@
               },
               "queryRef": "d_local.estado Hierarquia.estado",
               "nativeQueryRef": "estado Hierarquia estado",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -53,7 +53,7 @@
               },
               "queryRef": "d_local.estado Hierarquia.cidade",
               "nativeQueryRef": "estado Hierarquia cidade",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -67,12 +67,12 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_tm"
+                  "Property": "m_qtd_vendida"
                 }
               },
-              "queryRef": "vw_fefo.m_tm",
-              "nativeQueryRef": "Ticket Médio",
-              "displayName": "Ticket Médio"
+              "queryRef": "vw_fefo.m_qtd_vendida",
+              "nativeQueryRef": "Qtd Vendida",
+              "displayName": "Qtd Vendida"
             }
           ],
           "fieldParameters": [
@@ -140,7 +140,7 @@
                     "Entity": "vw_fefo"
                   }
                 },
-                "Property": "m_tm"
+                "Property": "m_qtd_vendida"
               }
             },
             "direction": "Descending"

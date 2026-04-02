@@ -38,12 +38,12 @@
                       "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_valor_entrada"
+                  "Property": "m_qtd_entrada"
                 }
               },
-              "queryRef": "vw_lote.m_valor_entrada",
-              "nativeQueryRef": "Valor Total",
-              "displayName": "Valor Total"
+              "queryRef": "vw_lote.m_qtd_entrada",
+              "nativeQueryRef": "Qtd Entrada",
+              "displayName": "Qtd Entrada"
             }
           ],
           "fieldParameters": [

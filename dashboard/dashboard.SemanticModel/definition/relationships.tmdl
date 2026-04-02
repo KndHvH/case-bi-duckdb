@@ -28,7 +28,7 @@ relationship 32492319-086e-4bc4-8973-651d4c96dde1
 	fromColumn: vw_lote.datahora_recebimento
 	toColumn: LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6.Date
 
-relationship 8f7dc3f2-e031-4959-8faf-713ee21843b4
+relationship 0e1f1294-fcef-4620-adaa-0d07f0e04807
 	joinOnDateBehavior: datePartOnly
 	fromColumn: d_calendar.Date
 	toColumn: LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e.Date

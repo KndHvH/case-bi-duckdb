@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "c72cc0698e30eaf61653",
   "position": {
-    "x": 696.971283533844,
-    "y": 16.317053460658556,
+    "x": 727.36935703116217,
+    "y": 12.558895373199922,
     "z": 7000,
-    "height": 90.909297852240513,
-    "width": 242.42479427264138,
+    "height": 103.61088682889937,
+    "width": 242.80531054853185,
     "tabOrder": 7000
   },
   "visual": {
@@ -17,59 +17,22 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "d_calendar"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
+                    "SourceRef": {
+                      "Entity": "d_calendar"
                     }
                   },
-                  "Level": "Ano"
+                  "Property": "year"
                 }
               },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Ano",
-              "nativeQueryRef": "Date Ano"
+              "queryRef": "d_calendar.year",
+              "nativeQueryRef": "year"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "d_calendar"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date"
-                      }
-                    },
-                    "Hierarchy": "Hierarquia de datas"
-                  }
-                },
-                "Level": "Ano"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -422,8 +385,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e",
+                    "Name": "d",
+                    "Entity": "d_calendar",
                     "Type": 0
                   }
                 ],
@@ -436,10 +399,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "l"
+                                  "Source": "d"
                                 }
                               },
-                              "Property": "Ano"
+                              "Property": "year"
                             }
                           }
                         ],
@@ -518,5 +481,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5a925935e909d3a156af",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

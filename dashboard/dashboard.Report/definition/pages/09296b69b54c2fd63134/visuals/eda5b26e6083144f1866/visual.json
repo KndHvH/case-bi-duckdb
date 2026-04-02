@@ -67,7 +67,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''vw_lote''[m_valor_entrada]'"
+                                "Value": "'''vw_lote''[m_qtd_entrada]'"
                               }
                             }
                           ]
@@ -95,7 +95,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''vw_lote''[m_valor_entrada]'"
+                                      "Value": "'''vw_lote''[m_qtd_entrada]'"
                                     }
                                   }
                                 ]
@@ -119,7 +119,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Valor Total"
+                            "0": "Qtd Entrada"
                           }
                         ]
                       }

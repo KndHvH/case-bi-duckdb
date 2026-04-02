@@ -59,12 +59,10 @@ class SilverPipeline:
         self.conn.execute("""
             CREATE TABLE d_fornecedor AS
             SELECT
-                ROW_NUMBER() OVER (ORDER BY nome_clean)  AS id,
-                nome_clean                               AS nome
-            FROM (
-                SELECT DISTINCT UPPER(clean(nome)) AS nome_clean
-                FROM raw_recebimento
-            )
+                ROW_NUMBER() OVER () AS id,
+                UPPER(clean("FORNECEDOR")) AS nome
+            FROM raw_recebimento
+            GROUP BY "FORNECEDOR"
         """)
 
     def _create_d_sku(self):
