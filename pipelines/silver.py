@@ -120,11 +120,11 @@ class SilverPipeline:
                 f.id                                     AS id_fornecedor,
                 excel_to_timestamp(r."DATA RECEBIMENTO") AS data_recebimento,
                 excel_to_timestamp(r."VALIDADE")         AS data_vencimento,
-                CAST(
-                    REPLACE(
-                        REPLACE(clean(r."VALOR"), 'R$ ', ''),
-                    ',', '.')
-                AS FLOAT)                                AS valor_unitario,
+                CASE
+                    WHEN CAST(REPLACE(REPLACE(clean(r."VALOR"), 'R$ ', ''), ',', '.') AS FLOAT) > 10000
+                    THEN NULL
+                    ELSE CAST(REPLACE(REPLACE(clean(r."VALOR"), 'R$ ', ''), ',', '.') AS FLOAT)
+                END AS valor_unitario,
                 CAST(clean(r."QUANTIDADE") AS INT)       AS quantidade
             FROM raw_recebimento r
             JOIN d_sku s

@@ -1,20 +1,25 @@
 table vw_fefo
 	lineageTag: ddcf8314-e111-4c21-adc6-58fd8aba89fe
 
-	measure m_total_vendido = SUM(vw_fefo[custo_total])
+	measure m_total_vendido = SUM(vw_fefo[valor])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 50cedadd-51bc-4d74-b99f-5ee6f8e4271f
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure m_qtd_vendida = SUM(vw_fefo[qtd_consumida])
+		formatString: 0
 		lineageTag: b3d7d6fb-bdb9-4b66-b614-98208e4784ae
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure m_tm = DIVIDE([m_total_vendido],[m_qtd_vendida])
+	measure m_tm =
+			DIVIDE(
+			    SUM(vw_fefo[valor]),
+			    DISTINCTCOUNT(vw_fefo[id_saida])
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 806f7920-2cc0-4c25-bbf9-aef96d5e4f33
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column id_saida
 		dataType: int64
@@ -62,15 +67,16 @@ table vw_fefo
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column custo_total
+	column valor
 		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 80eaee8b-6028-46d9-844f-599e8814f2d7
 		summarizeBy: sum
-		sourceColumn: custo_total
+		sourceColumn: valor
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column datahora_venda
 		dataType: dateTime
@@ -88,7 +94,7 @@ table vw_fefo
 
 	column data_venda
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: a6a92d14-22ed-4afa-9799-6e1ae35dbbe3
 		summarizeBy: none
 		sourceColumn: data_venda
@@ -97,13 +103,35 @@ table vw_fefo
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column valor_unitario
+		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		lineageTag: 28289bd7-d05e-4d37-bdcb-42bebddae11f
+		summarizeBy: none
+		sourceColumn: valor_unitario
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column nf
+		dataType: string
+		lineageTag: 7bad034a-e6b3-4984-a1cd-1f7905b1647f
+		summarizeBy: none
+		sourceColumn: nf
+
+		annotation SummarizationSetBy = Automatic
+
 	partition vw_fefo = m
 		mode: import
 		source =
 				let
-				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\gold\vw_fefo.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Fonte = Parquet.Document(File.Contents("C:\Users\mathe\repos\case-bi-duckdb\data\gold\vw_fefo.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Colunas Renomeadas" = Table.RenameColumns(Fonte,{{"custo_total", "valor"}})
 				in
-				    Fonte
+				    #"Colunas Renomeadas"
 
 	annotation PBI_NavigationStepName = Navegação
 

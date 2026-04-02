@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "09296b69b54c2fd63134",
+  "displayName": "Entrada",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "411L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "ac763c4467dec2954dac",
+      "target": "b0c827b256fabfa09f38",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ac763c4467dec2954dac",
+      "target": "f5422aa59cee6a199c82",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f5422aa59cee6a199c82",
+      "target": "b0c827b256fabfa09f38",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f5422aa59cee6a199c82",
+      "target": "ac763c4467dec2954dac",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b0c827b256fabfa09f38",
+      "target": "f5422aa59cee6a199c82",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b0c827b256fabfa09f38",
+      "target": "ac763c4467dec2954dac",
+      "type": "DataFilter"
+    }
+  ]
+}

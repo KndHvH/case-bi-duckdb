@@ -1,6 +1,23 @@
 table vw_lote
 	lineageTag: 554a5edd-cd69-4b6f-bbbf-3289c45fe69a
 
+	measure m_total_entrada =
+			CALCULATE(
+			    SUM(vw_lote[quantidade_entrada]),
+			    USERELATIONSHIP(vw_lote[data_recebimento], d_calendar[Date])
+			)
+		formatString: 0
+		lineageTag: 7e4e3611-1f5e-4921-ab25-4d4f17973552
+
+	measure m_valor_total_entrada =
+			CALCULATE(
+			    SUM(vw_lote[valor_entrada]),
+			    USERELATIONSHIP(vw_lote[data_recebimento], d_calendar[Date])
+			)
+		lineageTag: f6ce2838-30c0-4d96-b1c1-ffd9f70f5f5b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column id_lote
 		dataType: int64
 		formatString: 0
@@ -30,13 +47,14 @@ table vw_lote
 
 	column valor_unitario
 		dataType: double
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: f9df6b42-d79e-4e8d-8260-570af45707db
 		summarizeBy: sum
 		sourceColumn: valor_unitario
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column quantidade_entrada
 		dataType: int64
@@ -111,7 +129,7 @@ table vw_lote
 
 	column data_recebimento
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: 07200418-b8d7-4ac0-a937-2a019df6ecf3
 		summarizeBy: none
 		sourceColumn: data_recebimento
@@ -120,9 +138,11 @@ table vw_lote
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column data_vencimento
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: 42af5c8a-c881-4715-bb40-2c16fa260f69
 		summarizeBy: none
 		sourceColumn: data_vencimento
@@ -135,6 +155,24 @@ table vw_lote
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column nf
+		dataType: string
+		lineageTag: 312dee1a-32a3-4466-aa20-d7f46b2e360d
+		summarizeBy: none
+		sourceColumn: nf
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_entrada = vw_lote[quantidade_entrada] * vw_lote[valor_unitario]
+		lineageTag: a70c8ee2-653f-4a32-93ea-5e60fcb04012
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition vw_lote = m
 		mode: import

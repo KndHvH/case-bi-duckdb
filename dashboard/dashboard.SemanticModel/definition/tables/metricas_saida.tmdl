@@ -1,4 +1,4 @@
-table Metrica
+table metricas_saida
 	lineageTag: de279002-4a6e-4f15-9ec9-f0851caa0d96
 
 	column Metrica
@@ -36,13 +36,14 @@ table Metrica
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Metrica = calculated
+	partition metricas_saida = calculated
 		mode: import
 		source =
 				{
-				    ("Quantidade vendida", NAMEOF('vw_fefo'[m_qtd_vendida]), 0),
-				    ("Ticket Médio", NAMEOF('vw_fefo'[m_tm]), 1),
-				    ("Valor Total", NAMEOF('vw_fefo'[m_total_vendido]), 2)
+				    ("Valor Total", NAMEOF('vw_fefo'[m_total_vendido]), 0),
+				    ("Qtd Vendida", NAMEOF('vw_fefo'[m_qtd_vendida]), 1),
+				    ("Ticket Médio", NAMEOF('vw_fefo'[m_tm]), 2)
+				
 				}
 
 	annotation PBI_Id = 9607f02e8b534fb7939bb11acea3ca11

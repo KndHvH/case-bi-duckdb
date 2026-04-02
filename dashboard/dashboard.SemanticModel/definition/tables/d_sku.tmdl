@@ -26,6 +26,12 @@ table d_sku
 
 		annotation SummarizationSetBy = Automatic
 
+	column busca_produto = d_sku[sku_original] & " | " & d_sku[descricao]
+		lineageTag: e08fb82e-165f-43a8-9238-5736ffccf020
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition d_sku = m
 		mode: import
 		source =

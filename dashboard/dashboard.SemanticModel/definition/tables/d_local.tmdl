@@ -26,6 +26,17 @@ table d_local
 
 		annotation SummarizationSetBy = Automatic
 
+	hierarchy 'estado Hierarquia'
+		lineageTag: 003e25a1-06d8-4b24-aa68-cd9e36374014
+
+		level Estado
+			lineageTag: 9b3cee3c-e6d8-4ef9-ab1f-344190132b76
+			column: estado
+
+		level Cidade
+			lineageTag: 992437b1-0196-47cd-97e5-1ecc451a6694
+			column: cidade
+
 	partition d_local = m
 		mode: import
 		source =

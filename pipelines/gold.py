@@ -41,6 +41,7 @@ class GoldPipeline:
                     id_sku,
                     id_cliente,
                     id_local,
+                    nf,
                     data_venda,
                     quantidade,
                     SUM(quantidade) OVER (
@@ -55,6 +56,7 @@ class GoldPipeline:
                 s.id_saida,
                 s.id_cliente,
                 s.id_local,
+                s.nf,
                 s.data_venda::DATE  AS data_venda,
                 s.data_venda        AS datahora_venda,
                 e.id_lote,
@@ -62,7 +64,8 @@ class GoldPipeline:
                 GREATEST(s.faixa_fim - s.quantidade, e.faixa_fim - e.quantidade) AS qtd_consumida,
                 (LEAST(s.faixa_fim, e.faixa_fim) -
                 GREATEST(s.faixa_fim - s.quantidade, e.faixa_fim - e.quantidade))
-                * e.valor_unitario                                                AS custo_total
+                * e.valor_unitario                                                AS custo_total,
+                e.valor_unitario
             FROM acum_saida s
             JOIN acum_entrada e
                 ON s.id_sku = e.id_sku
@@ -85,6 +88,7 @@ class GoldPipeline:
             SELECT
                 e.id                                AS id_lote,
                 e.id_sku,
+                e.nf,
                 e.id_fornecedor,
                 e.data_recebimento as datahora_recebimento,
                 e.data_recebimento::DATE as data_recebimento,

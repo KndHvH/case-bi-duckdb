@@ -1,0 +1,39 @@
+table metricas_entrada
+	lineageTag: 982683ce-2459-40c6-8d0b-7b44386e098a
+
+	column Value1
+		lineageTag: 184b7505-7915-4d33-b32a-56a4d145edef
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value2
+		lineageTag: c76e8949-30ed-4271-a530-e7e84d99faff
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value2]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value3
+		formatString: 0
+		lineageTag: d31aaae0-d31a-42da-9666-e02ab3b7b541
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition metricas_entrada = calculated
+		mode: import
+		source =
+				{
+				    ("Valor Total", NAMEOF('vw_lote'[m_valor_total_entrada]), 0),
+				    ("Qtd entrada", NAMEOF('vw_lote'[m_total_entrada]), 1)
+				
+				}
+
+	annotation PBI_Id = 0b650e78e1154bbfb7b4bc8fbd8e9cad
+

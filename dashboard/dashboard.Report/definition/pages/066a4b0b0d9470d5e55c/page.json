@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "066a4b0b0d9470d5e55c",
-  "displayName": "Página 1",
+  "displayName": "Saida",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
@@ -19,5 +19,67 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "5e3ec6b5c3130868c678",
+      "target": "de432a3672adcfaf55df",
+      "type": "DataFilter"
+    },
+    {
+      "source": "5e3ec6b5c3130868c678",
+      "target": "69fa4a4e6bd675ee9277",
+      "type": "DataFilter"
+    },
+    {
+      "source": "5e3ec6b5c3130868c678",
+      "target": "3877071de83c1851b845",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3877071de83c1851b845",
+      "target": "5e3ec6b5c3130868c678",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3877071de83c1851b845",
+      "target": "de432a3672adcfaf55df",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3877071de83c1851b845",
+      "target": "69fa4a4e6bd675ee9277",
+      "type": "DataFilter"
+    },
+    {
+      "source": "69fa4a4e6bd675ee9277",
+      "target": "de432a3672adcfaf55df",
+      "type": "DataFilter"
+    },
+    {
+      "source": "69fa4a4e6bd675ee9277",
+      "target": "5e3ec6b5c3130868c678",
+      "type": "DataFilter"
+    },
+    {
+      "source": "69fa4a4e6bd675ee9277",
+      "target": "3877071de83c1851b845",
+      "type": "DataFilter"
+    },
+    {
+      "source": "de432a3672adcfaf55df",
+      "target": "69fa4a4e6bd675ee9277",
+      "type": "DataFilter"
+    },
+    {
+      "source": "de432a3672adcfaf55df",
+      "target": "5e3ec6b5c3130868c678",
+      "type": "DataFilter"
+    },
+    {
+      "source": "de432a3672adcfaf55df",
+      "target": "3877071de83c1851b845",
+      "type": "DataFilter"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 201,
+        "x": 485,
         "y": 0
       },
       "nodes": [
@@ -104,10 +104,21 @@
             "x": 1659,
             "y": 289.75
           },
-          "nodeIndex": "Metrica",
-          "nodeLineageTag": "de279002-4a6e-4f15-9ec9-f0851caa0d96",
+          "nodeIndex": "metricas_saida",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1943,
+            "y": 265.75
+          },
+          "nodeIndex": "metricas_entrada",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

@@ -24,7 +24,8 @@ ref table LocalDateTable_fe15d71f-f4ee-4f6c-873f-1a2541d5668d
 ref table LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6
 ref table LocalDateTable_251dbf71-9753-4c4a-9a0c-bfe308aa4f81
 ref table LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e
-ref table Metrica
+ref table metricas_saida
+ref table metricas_entrada
 
 ref cultureInfo pt-BR
 
