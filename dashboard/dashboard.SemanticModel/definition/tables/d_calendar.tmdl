@@ -10,7 +10,7 @@ table d_calendar
 
 		variation Variation
 			isDefault
-			relationship: a35baa9a-d249-47db-8e67-329436bd0577
+			relationship: 8f7dc3f2-e031-4959-8faf-713ee21843b4
 			defaultHierarchy: LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
@@ -124,7 +124,7 @@ table d_calendar
 				ADDCOLUMNS(
 				    CALENDAR(
 				        MIN(vw_lote[data_recebimento]), 
-				        MAX(vw_fefo[data_venda])
+				        MAX(vw_lote[data_vencimento])
 				    ),
 				    "year",             YEAR([Date]),
 				    "quarter",          QUARTER([Date]),

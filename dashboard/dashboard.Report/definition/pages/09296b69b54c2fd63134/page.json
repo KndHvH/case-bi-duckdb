@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "09296b69b54c2fd63134",
   "displayName": "Entrada",
-  "displayOption": "FitToPage",
+  "displayOption": "ActualSize",
   "height": 720,
-  "width": 1280,
+  "width": 1600,
   "objects": {
     "outspacePane": [
       {

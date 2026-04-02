@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "e622edcfa9d927dad791",
   "displayName": "Entrada detalhado",
-  "displayOption": "FitToPage",
+  "displayOption": "ActualSize",
   "height": 720,
-  "width": 1280,
+  "width": 1600,
   "filterConfig": {
     "filters": [
       {
@@ -79,7 +79,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'MOCA LEITE CONDENSADO TETRA PAK 395G'"
+                          "Value": "'DESODORANTE AEROSOL ANTITRANSPIRANTE DOVE WOMEN INVISIBLE DRY 12X250ML'"
                         }
                       }
                     ]
@@ -109,24 +109,13 @@
       {
         "name": "1c77ed0c6abef38aa16a",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Ano"
+            "Property": "Date"
           }
         },
         "type": "Categorical",
@@ -135,24 +124,13 @@
       {
         "name": "e053ff8fd5017f51cbc6",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Mês"
+            "Property": "Date"
           }
         },
         "type": "Categorical",
@@ -161,24 +139,13 @@
       {
         "name": "6d3717bd4e2b9f97225e",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Dia"
+            "Property": "Date"
           }
         },
         "type": "Categorical",
@@ -265,24 +232,13 @@
         "name": "fa18343b8a3f5f5ae7cc",
         "boundFilter": "1c77ed0c6abef38aa16a",
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Ano"
+            "Property": "Date"
           }
         }
       },
@@ -290,24 +246,13 @@
         "name": "eb757f64ddb1eee65138",
         "boundFilter": "e053ff8fd5017f51cbc6",
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Mês"
+            "Property": "Date"
           }
         }
       },
@@ -315,24 +260,13 @@
         "name": "4b6eec65a1b26f41f9b6",
         "boundFilter": "6d3717bd4e2b9f97225e",
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Dia"
+            "Property": "Date"
           }
         }
       },

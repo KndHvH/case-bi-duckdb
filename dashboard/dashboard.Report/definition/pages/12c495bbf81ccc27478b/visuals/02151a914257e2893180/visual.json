@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "d9acace68443ab79f3f0",
+  "name": "02151a914257e2893180",
   "position": {
-    "x": 0,
-    "y": 122.14480019121548,
-    "z": 4000,
-    "height": 176.22417737511239,
-    "width": 600.46756735223482,
-    "tabOrder": 4000
+    "x": 800,
+    "y": 176.66666666666666,
+    "z": 8001,
+    "height": 125.55555555555556,
+    "width": 800,
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -42,28 +42,11 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_valor_vendido"
+                  "Property": "m_qtd_vendida"
                 }
               },
-              "queryRef": "vw_fefo.m_total_vendido",
-              "nativeQueryRef": "Valor Total",
-              "displayName": "Valor Total"
-            }
-          ],
-          "fieldParameters": [
-            {
-              "parameterExpr": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "metricas_saida"
-                    }
-                  },
-                  "Property": "Metrica"
-                }
-              },
-              "index": 0,
-              "length": 1
+              "queryRef": "vw_fefo.m_qtd_vendida",
+              "nativeQueryRef": "m_qtd_vendida"
             }
           ]
         }
@@ -78,7 +61,7 @@
                     "Entity": "vw_fefo"
                   }
                 },
-                "Property": "m_valor_vendido"
+                "Property": "m_qtd_vendida"
               }
             },
             "direction": "Descending"
@@ -95,9 +78,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#3FDB1C'"
                     }
                   }
                 }
@@ -187,7 +169,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 1,
                       "Percent": 0
                     }
                   }
@@ -212,9 +194,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#3FDB1C'"
                     }
                   }
                 }

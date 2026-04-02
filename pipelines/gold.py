@@ -92,7 +92,8 @@ class GoldPipeline:
                 e.id_fornecedor,
                 e.data_recebimento as datahora_recebimento,
                 e.data_recebimento::DATE as data_recebimento,
-                e.data_vencimento::DATE as data_vencimento,
+                CASE WHEN e.data_vencimento::DATE > (CURRENT_DATE + INTERVAL '10 years') 
+                    THEN NULL ELSE e.data_vencimento::DATE END as data_vencimento,
                 e.valor_unitario,
                 e.quantidade                        AS quantidade_entrada,
                 COALESCE(v.quantidade_vendida, 0)   AS quantidade_vendida,

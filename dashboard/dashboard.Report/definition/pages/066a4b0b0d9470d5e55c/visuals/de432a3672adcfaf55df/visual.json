@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "de432a3672adcfaf55df",
   "position": {
-    "x": 639.62849565781539,
-    "y": 122.14480019121548,
+    "x": 874.12786396385115,
+    "y": 123.54340477355763,
     "z": 5000,
-    "height": 346.85393642085614,
-    "width": 640.56089871271013,
+    "height": 346.15463412968506,
+    "width": 726.10887899930572,
     "tabOrder": 5000
   },
   "visual": {
@@ -38,12 +38,12 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_valor_vendido"
+                  "Property": "m_tm"
                 }
               },
-              "queryRef": "vw_fefo.m_total_vendido",
-              "nativeQueryRef": "Valor Total",
-              "displayName": "Valor Total"
+              "queryRef": "vw_fefo.m_tm",
+              "nativeQueryRef": "Ticket Médio",
+              "displayName": "Ticket Médio"
             }
           ],
           "fieldParameters": [
@@ -75,7 +75,7 @@
                     "Entity": "vw_fefo"
                   }
                 },
-                "Property": "m_valor_vendido"
+                "Property": "m_tm"
               }
             },
             "direction": "Descending"
@@ -302,7 +302,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "450.55240430544563D"
+                  "Value": "535.6128747550563D"
                 }
               }
             }
@@ -337,6 +337,20 @@
           },
           "selector": {
             "metadata": "vw_fefo.m_tm"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "135D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_valor_vendido"
           }
         }
       ]

@@ -3,10 +3,10 @@
   "name": "35c407d8f3b17b15e9df",
   "position": {
     "x": 0,
-    "y": 298.36897756632789,
+    "y": 360,
     "z": 3000,
-    "height": 421.44618081243812,
-    "width": 1280.1893943705256,
+    "height": 360,
+    "width": 1600,
     "tabOrder": 3000
   },
   "visual": {
@@ -263,7 +263,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "85D"
+                  "Value": "102.14285714285714D"
                 }
               }
             }
@@ -277,7 +277,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "102.31007973075383D"
+                  "Value": "133.6464916708386D"
                 }
               }
             }
@@ -291,7 +291,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "375.49988577878304D"
+                  "Value": "549.7771783951061D"
                 }
               }
             }
@@ -375,7 +375,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101D"
+                  "Value": "145.2857114183324D"
                 }
               }
             }
@@ -389,7 +389,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "136.29829720746088D"
+                  "Value": "159.10724025105432D"
                 }
               }
             }
@@ -487,7 +487,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "116.4474326495706D"
+                  "Value": "136.37228541120436D"
                 }
               }
             }
@@ -506,6 +506,13 @@
                   "Value": "'Left'"
                 }
               }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -520,6 +527,13 @@
                   "Value": "'Left'"
                 }
               }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -532,6 +546,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Left'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

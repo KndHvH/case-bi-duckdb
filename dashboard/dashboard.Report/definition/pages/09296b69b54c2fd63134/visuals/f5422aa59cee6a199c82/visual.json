@@ -3,10 +3,10 @@
   "name": "f5422aa59cee6a199c82",
   "position": {
     "x": 0,
-    "y": 468.99873661207164,
+    "y": 468.75,
     "z": 2000,
-    "height": 250.81642176669436,
-    "width": 1280.1893943705256,
+    "height": 251.25,
+    "width": 1600,
     "tabOrder": 2000
   },
   "visual": {
@@ -37,8 +37,8 @@
                   "Level": "Mês"
                 }
               },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Mês",
-              "nativeQueryRef": "Date Mês",
+              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Mês1",
+              "nativeQueryRef": "Date Mês1",
               "active": true
             },
             {
@@ -79,12 +79,28 @@
                       "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_qtd_entrada"
+                  "Property": "m_valor_entrada"
                 }
               },
-              "queryRef": "vw_lote.total_entrada",
-              "nativeQueryRef": "Qtd Entrada",
-              "displayName": "Qtd Entrada"
+              "queryRef": "vw_lote.m_valor_entrada",
+              "nativeQueryRef": "Valor Total",
+              "displayName": "Valor Total"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metricas_entrada"
+                    }
+                  },
+                  "Property": "metricas_entrada"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         }

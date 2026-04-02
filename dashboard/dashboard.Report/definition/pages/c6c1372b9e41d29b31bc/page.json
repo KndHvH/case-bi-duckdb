@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "c6c1372b9e41d29b31bc",
   "displayName": "Ciclo detalhado",
-  "displayOption": "FitToPage",
+  "displayOption": "ActualSize",
   "height": 720,
-  "width": 1280,
+  "width": 1600,
   "filterConfig": {
     "filters": [
       {
@@ -115,24 +115,13 @@
       {
         "name": "1c77ed0c6abef38aa16a",
         "field": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Ano"
+            "Property": "Date"
           }
         },
         "type": "Categorical",
@@ -140,6 +129,51 @@
       },
       {
         "name": "e053ff8fd5017f51cbc6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "6d3717bd4e2b9f97225e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "7c9b30ece9f7284ab9c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "full_date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "c0c481e2e5a5724a3a02",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -191,71 +225,10 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'outubro'"
+                          "Value": "'agosto'"
                         }
                       }
                     ]
-                  ]
-                }
-              },
-              "Annotations": {
-                "filterExpressionMetadata": {
-                  "expressions": [
-                    {
-                      "HierarchyLevel": {
-                        "Expression": {
-                          "Hierarchy": {
-                            "Expression": {
-                              "PropertyVariationSource": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "d_calendar"
-                                  }
-                                },
-                                "Name": "Variation",
-                                "Property": "Date"
-                              }
-                            },
-                            "Hierarchy": "Hierarquia de datas"
-                          }
-                        },
-                        "Level": "Mês"
-                      }
-                    }
-                  ],
-                  "decomposedIdentities": {
-                    "values": [
-                      [
-                        {
-                          "0": [
-                            {
-                              "Literal": {
-                                "Value": "'outubro'"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    ],
-                    "columns": [
-                      {
-                        "value": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_8f42f405-9d1c-41c7-afe1-51c59989c38e"
-                              }
-                            },
-                            "Property": "Mês"
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "valueMap": [
-                    {
-                      "0": "outubro"
-                    }
                   ]
                 }
               }
@@ -265,7 +238,7 @@
         "howCreated": "Drillthrough"
       },
       {
-        "name": "6d3717bd4e2b9f97225e",
+        "name": "5a1c8576d3e60449d867",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -285,21 +258,6 @@
               }
             },
             "Level": "Dia"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "7c9b30ece9f7284ab9c5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "full_date"
           }
         },
         "type": "Categorical",
@@ -413,30 +371,61 @@
         "name": "fa18343b8a3f5f5ae7cc",
         "boundFilter": "1c77ed0c6abef38aa16a",
         "fieldExpr": {
-          "HierarchyLevel": {
+          "Column": {
             "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_calendar"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
+              "SourceRef": {
+                "Entity": "d_calendar"
               }
             },
-            "Level": "Ano"
+            "Property": "Date"
           }
         }
       },
       {
         "name": "eb757f64ddb1eee65138",
         "boundFilter": "e053ff8fd5017f51cbc6",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      },
+      {
+        "name": "4b6eec65a1b26f41f9b6",
+        "boundFilter": "6d3717bd4e2b9f97225e",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "Date"
+          }
+        }
+      },
+      {
+        "name": "110c841d0797728d1809",
+        "boundFilter": "7c9b30ece9f7284ab9c5",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendar"
+              }
+            },
+            "Property": "full_date"
+          }
+        }
+      },
+      {
+        "name": "7bf7469385590305a126",
+        "boundFilter": "c0c481e2e5a5724a3a02",
         "fieldExpr": {
           "HierarchyLevel": {
             "Expression": {
@@ -460,8 +449,8 @@
         }
       },
       {
-        "name": "4b6eec65a1b26f41f9b6",
-        "boundFilter": "6d3717bd4e2b9f97225e",
+        "name": "810fb20bb5baf0e83287",
+        "boundFilter": "5a1c8576d3e60449d867",
         "fieldExpr": {
           "HierarchyLevel": {
             "Expression": {
@@ -483,20 +472,6 @@
             "Level": "Dia"
           }
         }
-      },
-      {
-        "name": "110c841d0797728d1809",
-        "boundFilter": "7c9b30ece9f7284ab9c5",
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_calendar"
-              }
-            },
-            "Property": "full_date"
-          }
-        }
       }
     ]
   },
@@ -513,29 +488,20 @@
           }
         }
       }
+    ],
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
     ]
   },
-  "visibility": "HiddenInViewMode",
-  "visualInteractions": [
-    {
-      "source": "c85438b9fdd9e53dab74",
-      "target": "d9acace68443ab79f3f0",
-      "type": "DataFilter"
-    },
-    {
-      "source": "d9acace68443ab79f3f0",
-      "target": "c85438b9fdd9e53dab74",
-      "type": "DataFilter"
-    },
-    {
-      "source": "c3b2e74cbbf834052a5c",
-      "target": "c85438b9fdd9e53dab74",
-      "type": "DataFilter"
-    },
-    {
-      "source": "c3b2e74cbbf834052a5c",
-      "target": "d9acace68443ab79f3f0",
-      "type": "DataFilter"
-    }
-  ]
+  "visibility": "HiddenInViewMode"
 }

@@ -20,16 +20,15 @@ table vw_lote
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure m_qtd_expirada =
+			
 			CALCULATE(
 			    SUM(vw_lote[quantidade_expirada]),
-			    USERELATIONSHIP(vw_lote[data_vencimento], d_calendar[Date])
+			    USERELATIONSHIP(vw_lote[data_vencimento], d_calendar[Date]),
+			    NOT ISBLANK(vw_lote[data_vencimento]),
+			    vw_lote[data_vencimento] <= TODAY()
 			)
+		formatString: 0
 		lineageTag: 4fbf231d-56e4-4d65-a8fc-e1bffb746480
-
-	measure m_qtd_estoque = [m_qtd_entrada] - [m_qtd_expirada] - [m_qtd_vendida]
-		lineageTag: b215b9dd-d8eb-4622-88c7-171cc029dd7e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure m_valor_expirado =
 			
@@ -37,17 +36,20 @@ table vw_lote
 			    SUM(vw_lote[valor_expirado]),
 			    USERELATIONSHIP(vw_lote[data_vencimento], d_calendar[Date])
 			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: e42b144e-f4b8-47f9-958f-60ee12028b3d
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	measure m_valor_estoque = [m_valor_entrada] - [m_valor_vendido] - [m_valor_expirado]
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 0dd7eae0-7a77-4093-9c53-b1b8b41afa14
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure m_tempo_medio
-		lineageTag: 474fd135-e778-4b35-86e1-bb50b8d5c427
+	measure m_qtd_estoque = [m_qtd_entrada] - [m_qtd_expirada] - [m_qtd_vendida]
+		formatString: 0
+		lineageTag: 61e50da7-5992-4853-9c3d-d3901f42530e
 
 	column id_lote
 		dataType: int64

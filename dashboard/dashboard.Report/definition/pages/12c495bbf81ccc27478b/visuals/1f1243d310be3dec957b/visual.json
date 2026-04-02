@@ -1,59 +1,34 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "c85438b9fdd9e53dab74",
+  "name": "1f1243d310be3dec957b",
   "position": {
-    "x": 600.46756735223482,
-    "y": 122.14480019121548,
-    "z": 5000,
-    "height": 176.22417737511239,
-    "width": 679.7218270182907,
-    "tabOrder": 5000
+    "x": 0,
+    "y": 176.66666666666666,
+    "z": 8002,
+    "height": 124.44444444444444,
+    "width": 800,
+    "tabOrder": 8002
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "d_local"
-                        }
-                      },
-                      "Hierarchy": "estado Hierarquia"
+                    "SourceRef": {
+                      "Entity": "d_fornecedor"
                     }
                   },
-                  "Level": "Estado"
+                  "Property": "nome"
                 }
               },
-              "queryRef": "d_local.estado Hierarquia.estado",
-              "nativeQueryRef": "estado Hierarquia estado",
+              "queryRef": "d_fornecedor.nome",
+              "nativeQueryRef": "nome",
               "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "d_local"
-                        }
-                      },
-                      "Hierarchy": "estado Hierarquia"
-                    }
-                  },
-                  "Level": "Cidade"
-                }
-              },
-              "queryRef": "d_local.estado Hierarquia.cidade",
-              "nativeQueryRef": "estado Hierarquia cidade",
-              "active": false
             }
           ]
         },
@@ -64,32 +39,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "vw_fefo"
+                      "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_valor_vendido"
+                  "Property": "m_qtd_entrada"
                 }
               },
-              "queryRef": "vw_fefo.m_total_vendido",
-              "nativeQueryRef": "Valor Total",
-              "displayName": "Valor Total"
-            }
-          ],
-          "fieldParameters": [
-            {
-              "parameterExpr": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "metricas_saida"
-                    }
-                  },
-                  "Property": "Metrica"
-                }
-              },
-              "index": 0,
-              "length": 1,
-              "sortDirection": "Descending"
+              "queryRef": "vw_lote.m_qtd_entrada",
+              "nativeQueryRef": "m_qtd_entrada"
             }
           ]
         }
@@ -98,39 +55,16 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Measure": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_local"
-                      }
-                    },
-                    "Hierarchy": "estado Hierarquia"
+                  "SourceRef": {
+                    "Entity": "vw_lote"
                   }
                 },
-                "Level": "Estado"
+                "Property": "m_qtd_entrada"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "d_local"
-                      }
-                    },
-                    "Hierarchy": "estado Hierarquia"
-                  }
-                },
-                "Level": "Cidade"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -144,14 +78,86 @@
               "solid": {
                 "color": {
                   "expr": {
+                    "Literal": {
+                      "Value": "'#1B52DB'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F2393'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_estoque_acm"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1B52DB'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_entrada"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 4,
                       "Percent": 0
                     }
                   }
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_expirada"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3FDB1C'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_qtd_vendida"
           }
         }
       ],
@@ -162,6 +168,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
                 }
               }
             },
@@ -210,6 +223,13 @@
       "labels": [
         {
           "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -235,9 +255,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#1B52DB'"
                     }
                   }
                 }
@@ -277,6 +296,100 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1B52DB'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_entrada"
+          }
+        },
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_expirada"
+          }
+        },
+        {
+          "properties": {
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3FDB1C'"
+                    }
+                  }
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_qtd_vendida"
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -287,7 +400,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top locais'"
+                  "Value": "'Top Fornecedores'"
                 }
               }
             },
@@ -305,6 +418,17 @@
                     "ThemeDataColor": {
                       "ColorId": 1,
                       "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "null"
                     }
                   }
                 }
@@ -347,6 +471,19 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'21b18b523c145c178966'"
                 }
               }
             }

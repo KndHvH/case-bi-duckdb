@@ -793,7 +793,7 @@ cultureInfo pt-BR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "vw_fefo.m_total_vendido": {
+			    "vw_fefo.m_valor_vendido": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_fefo",
@@ -803,39 +803,29 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "m total vendido": {
+			          "m valor vendido": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "m_total_vendido": {
+			          "m_valor_vendido": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "m aggregate vendido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "m overall vendido": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
 			          "Valor Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vendido": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -868,7 +858,17 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Qtd vendida": {
+			          "Qtd Vendida": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Vendido": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1813,466 +1813,121 @@ cultureInfo pt-BR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "vw_lote.data_vencimento.hierarquia_de_data": {
+			    "vw_lote.m_valor_estoque": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
-			          "VariationSource": "data_vencimento",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas"
+			          "ConceptualProperty": "m_valor_estoque"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "hierarquia de data": {
+			          "m valor estoque": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "hierarquia de information": {
+			          "m_valor_estoque": {
 			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "hierarquia de fact": {
-			            "Type": "Noun",
+			          "Valor Estoque": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "hierarquia de info": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "hierarquia de statistic": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "hierarquia de document": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "hierarquia de figure": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "hierarquia de record": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "vw_lote.data_vencimento.ano": {
+			    "vw_lote.m_valor_expirado": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
-			          "VariationSource": "data_vencimento",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Ano"
+			          "ConceptualProperty": "m_valor_expirado"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ano": {
+			          "m valor expirado": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data vencimento ano": {
-			            "State": "Generated"
+			          "m_valor_expirado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "information vencimento ano": {
-			            "Type": "Noun",
+			          "Expirado": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.609
+			            "Weight": 0.9
 			          }
 			        },
 			        {
-			          "fact vencimento ano": {
-			            "Type": "Noun",
+			          "Valor Expirado": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info vencimento ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic vencimento ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document vencimento ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure vencimento ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record vencimento ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "vw_lote.data_vencimento.trimestre": {
+			    "vw_lote.m_qtd_expirada": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
-			          "VariationSource": "data_vencimento",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Trimestre"
+			          "ConceptualProperty": "m_qtd_expirada"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "trimestre": {
+			          "m qtd expirada": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data vencimento trimestre": {
-			            "State": "Generated"
+			          "m_qtd_expirada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "information vencimento trimestre": {
-			            "Type": "Noun",
+			          "Expirado": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.609
+			            "Weight": 0.9
 			          }
 			        },
 			        {
-			          "fact vencimento trimestre": {
-			            "Type": "Noun",
+			          "Qtd Expirada": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info vencimento trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic vencimento trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document vencimento trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure vencimento trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record vencimento trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "vw_lote.data_vencimento.mê": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "vw_lote",
-			          "VariationSource": "data_vencimento",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Mês"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mê": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "data vencimento mê": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "fact vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record vencimento mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "vw_lote.data_vencimento.dia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "vw_lote",
-			          "VariationSource": "data_vencimento",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Dia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "data vencimento dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "fact vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record vencimento dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3361,8 +3016,7 @@ cultureInfo pt-BR
 			            "Weight": 0.736
 			          }
 			        }
-			      ],
-			      "SemanticType": "Time"
+			      ]
 			    },
 			    "d_calendar.quarter": {
 			      "Definition": {
@@ -4166,7 +3820,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote.m_total_entrada": {
+			    "vw_lote.m_qtd_entrada": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
@@ -4176,39 +3830,29 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "m total entrada": {
+			          "m qtd entrada": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "m_total_entrada": {
+			          "m_qtd_entrada": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "m aggregate entrada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "m overall entrada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
 			          "Qtd Entrada": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Entrada": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4242,7 +3886,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote.m_valor_total_entrada": {
+			    "vw_lote.m_valor_entrada": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
@@ -4252,39 +3896,29 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "m valor total entrada": {
+			          "m valor entrada": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "m_valor_total_entrada": {
+			          "m_valor_entrada": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "m valor aggregate entrada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "m valor overall entrada": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
 			          "Valor Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Valor Entrada": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4401,6 +4035,39 @@ cultureInfo pt-BR
 			        {
 			          "metricas_entrada pedido": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "vw_lote.m_qtd_estoque": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "vw_lote",
+			          "ConceptualProperty": "m_qtd_estoque"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m qtd estoque": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "m_qtd_estoque": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Estoque final": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -4539,369 +4206,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote_data_vencimento_mê_has_vw_lote_data_vencimento_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.mê": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.mê"
-			          }
-			        },
-			        "vw_lote.data_vencimento.dia": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.dia"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê2"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_trimestre_has_vw_lote_data_vencimento_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.trimestre": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.trimestre"
-			          }
-			        },
-			        "vw_lote.data_vencimento.mê": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres2"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_ano_has_vw_lote_data_vencimento_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.ano": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.ano"
-			          }
-			        },
-			        "vw_lote.data_vencimento.trimestre": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.ano"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos2"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_hierarquia_de_data_has_vw_lote_data_vencimento_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.hierarquia_de_data"
-			          }
-			        },
-			        "vw_lote.data_vencimento.dia": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_hierarquia_de_data_has_vw_lote_data_vencimento_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.hierarquia_de_data"
-			          }
-			        },
-			        "vw_lote.data_vencimento.mê": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_hierarquia_de_data_has_vw_lote_data_vencimento_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.hierarquia_de_data"
-			          }
-			        },
-			        "vw_lote.data_vencimento.trimestre": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_hierarquia_de_data_has_vw_lote_data_vencimento_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.hierarquia_de_data"
-			          }
-			        },
-			        "vw_lote.data_vencimento.ano": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "vw_lote_data_vencimento_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "vw_lote"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "vw_lote.data_vencimento": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento"
-			          }
-			        },
-			        "vw_lote.data_vencimento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "vw_lote.data_vencimento.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "vw_lote.data_vencimento"
-			            },
-			            "Object": {
-			              "Role": "vw_lote.data_vencimento.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_vencimentos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
 			    "vw_lote_datahora_recebimento_mê_has_vw_lote_datahora_recebimento_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_lote"
@@ -4931,7 +4235,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
@@ -4944,7 +4248,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
@@ -4997,7 +4301,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -5010,7 +4314,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -5063,7 +4367,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -5076,7 +4380,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
@@ -5129,7 +4433,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -5162,7 +4466,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -5195,7 +4499,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres"
 			        }
 			      ]
 			    },
@@ -5228,7 +4532,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos"
 			        }
 			      ]
 			    },
@@ -5294,7 +4598,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -5307,7 +4611,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -5360,7 +4664,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -5373,7 +4677,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -5426,7 +4730,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -5439,7 +4743,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -5492,7 +4796,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -5525,7 +4829,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -5558,7 +4862,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -5591,7 +4895,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -5904,6 +5208,303 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "vw_lote_has_m_qtd_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_qtd_estoque": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_qtd_estoque"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_qtd_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_qtd_estoque": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_qtd_estoque"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_pct_expirado": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_pct_expirado": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_expirado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_expirado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_pct_expirado"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_pct_expirado": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_pct_expirado": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_expirado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_expirado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_pct_expirado"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_pct_vendido": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_pct_vendido": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_vendido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_vendido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_pct_vendido"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_pct_vendido": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_pct_vendido": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_vendido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_vendido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_pct_vendido"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_pct_entrada": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_pct_entrada": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_entrada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_pct_entrada"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_pct_entrada": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_pct_entrada": {
+			          "Target": {
+			            "Entity": "vw_lote.m_pct_entrada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_pct_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_pct_entrada"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_qtd_expirada_cml": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_qtd_expirada_cml": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_expirada_cml"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_expirada_cml"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_qtd_expirada_cml"
+			        }
+			      ]
+			    },
 			    "metricas_entrada_has_metricas_entrada": {
 			      "Binding": {
 			        "ConceptualEntity": "metricas_entrada"
@@ -5950,7 +5551,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote_has_m_valor_total_entrada": {
+			    "vw_lote_has_m_valor_entrada": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_lote"
 			      },
@@ -5961,9 +5562,9 @@ cultureInfo pt-BR
 			            "Entity": "vw_lote"
 			          }
 			        },
-			        "vw_lote.m_valor_total_entrada": {
+			        "vw_lote.m_valor_entrada": {
 			          "Target": {
-			            "Entity": "vw_lote.m_valor_total_entrada"
+			            "Entity": "vw_lote.m_valor_entrada"
 			          }
 			        }
 			      },
@@ -5974,12 +5575,12 @@ cultureInfo pt-BR
 			              "Role": "vw_lote"
 			            },
 			            "Object": {
-			              "Role": "vw_lote.m_valor_total_entrada"
+			              "Role": "vw_lote.m_valor_entrada"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "vw_lotes_have_m_valor_total_entrada"
+			          "ID": "vw_lotes_have_m_valor_entrada"
 			        }
 			      ]
 			    },
@@ -6016,7 +5617,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote_has_m_total_entrada": {
+			    "vw_lote_has_m_qtd_entrada": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_lote"
 			      },
@@ -6027,9 +5628,9 @@ cultureInfo pt-BR
 			            "Entity": "vw_lote"
 			          }
 			        },
-			        "vw_lote.m_total_entrada": {
+			        "vw_lote.m_qtd_entrada": {
 			          "Target": {
-			            "Entity": "vw_lote.m_total_entrada"
+			            "Entity": "vw_lote.m_qtd_entrada"
 			          }
 			        }
 			      },
@@ -6040,12 +5641,12 @@ cultureInfo pt-BR
 			              "Role": "vw_lote"
 			            },
 			            "Object": {
-			              "Role": "vw_lote.m_total_entrada"
+			              "Role": "vw_lote.m_qtd_entrada"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "vw_lotes_have_m_total_entrada"
+			          "ID": "vw_lotes_have_m_qtd_entrada"
 			        }
 			      ]
 			    },
@@ -7085,6 +6686,237 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "vw_lote_has_m_qtd_expirada": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_qtd_expirada": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_expirada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_expirada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_qtd_expirada"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_qtd_estoque_cml": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_qtd_estoque_cml": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_estoque_cml"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_estoque_cml"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_qtd_estoque_cml"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_qtd_estoque_cml": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_qtd_estoque_cml": {
+			          "Target": {
+			            "Entity": "vw_lote.m_qtd_estoque_cml"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_qtd_estoque_cml"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_qtd_estoque_cml"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_valor_expirado": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_valor_expirado": {
+			          "Target": {
+			            "Entity": "vw_lote.m_valor_expirado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_valor_expirado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_valor_expirado"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_valor_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_valor_estoque": {
+			          "Target": {
+			            "Entity": "vw_lote.m_valor_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_valor_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_valor_estoque"
+			        }
+			      ]
+			    },
+			    "vw_fefo_has_vw_lote_m_valor_estoque": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_fefo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_fefo": {
+			          "Target": {
+			            "Entity": "vw_fefo"
+			          }
+			        },
+			        "vw_lote.m_valor_estoque": {
+			          "Target": {
+			            "Entity": "vw_lote.m_valor_estoque"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_fefo"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_valor_estoque"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_fefos_have_m_valor_estoque"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_tempo_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_tempo_medio": {
+			          "Target": {
+			            "Entity": "vw_lote.m_tempo_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_tempo_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_tempo_medio"
+			        }
+			      ]
+			    },
 			    "vw_lote_has_data_vencimento": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_lote"
@@ -7541,7 +7373,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_fefo_has_m_total_vendido": {
+			    "vw_fefo_has_m_valor_vendido": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_fefo"
 			      },
@@ -7552,9 +7384,9 @@ cultureInfo pt-BR
 			            "Entity": "vw_fefo"
 			          }
 			        },
-			        "vw_fefo.m_total_vendido": {
+			        "vw_fefo.m_valor_vendido": {
 			          "Target": {
-			            "Entity": "vw_fefo.m_total_vendido"
+			            "Entity": "vw_fefo.m_valor_vendido"
 			          }
 			        }
 			      },
@@ -7565,12 +7397,12 @@ cultureInfo pt-BR
 			              "Role": "vw_fefo"
 			            },
 			            "Object": {
-			              "Role": "vw_fefo.m_total_vendido"
+			              "Role": "vw_fefo.m_valor_vendido"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "vw_fefos_have_m_total_vendido"
+			          "ID": "vw_fefos_have_m_valor_vendido"
 			        }
 			      ]
 			    },
@@ -7828,7 +7660,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos3"
+			          "ID": "hierarquia_de_data_have_anos2"
 			        }
 			      ]
 			    },
@@ -7861,7 +7693,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres3"
+			          "ID": "hierarquia_de_data_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -7894,7 +7726,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -7927,7 +7759,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -7960,7 +7792,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -7973,7 +7805,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
@@ -7993,7 +7825,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos3"
+			          "ID": "trimestres_are_in_anos2"
 			        }
 			      ]
 			    },
@@ -8026,7 +7858,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -8039,7 +7871,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -8059,7 +7891,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres3"
+			          "ID": "mê_are_in_trimestres2"
 			        }
 			      ]
 			    },
@@ -8092,7 +7924,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
@@ -8105,7 +7937,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
@@ -8125,7 +7957,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê3"
+			          "ID": "dias_are_in_mê2"
 			        }
 			      ]
 			    }

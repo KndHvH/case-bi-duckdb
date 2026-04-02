@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "32968e08b81ae9830412",
+  "name": "bad4d1cd7f3531ea8e29",
   "position": {
-    "x": 140.79286128911096,
-    "y": 15.850851933211169,
-    "z": 7000,
-    "height": 90.443096324793132,
-    "width": 423.3109869222277,
-    "tabOrder": 7000
+    "x": 198.1356491651396,
+    "y": 12.82054200480315,
+    "z": 8000,
+    "height": 90.909297852240513,
+    "width": 424.24338997712243,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -67,7 +67,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''vw_fefo''[m_total_vendido]'"
+                                "Value": "'''vw_fefo''[m_tm]'"
                               }
                             }
                           ]
@@ -95,7 +95,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''vw_fefo''[m_total_vendido]'"
+                                      "Value": "'''vw_fefo''[m_tm]'"
                                     }
                                   }
                                 ]
@@ -119,7 +119,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Valor Total"
+                            "0": "Ticket Médio"
                           }
                         ]
                       }

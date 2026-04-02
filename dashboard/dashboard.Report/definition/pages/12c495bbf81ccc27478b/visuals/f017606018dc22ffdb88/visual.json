@@ -3,11 +3,11 @@
   "name": "f017606018dc22ffdb88",
   "position": {
     "x": 0,
-    "y": 122.14480019121548,
-    "z": 6002,
-    "height": 55.0117802387917,
-    "width": 320.74665088380249,
-    "tabOrder": 6002
+    "y": 121.37931034482759,
+    "z": 5000,
+    "height": 54.482758620689658,
+    "width": 400,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "textSlicer",
@@ -530,6 +530,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "busca_produto",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

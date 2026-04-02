@@ -3,10 +3,10 @@
   "name": "63b47adce9e49e3bec41",
   "position": {
     "x": 0,
-    "y": 122.14480019121548,
+    "y": 184.44444444444443,
     "z": 4000,
-    "height": 176.22417737511239,
-    "width": 1280.1893943705256,
+    "height": 175.55555555555554,
+    "width": 1600,
     "tabOrder": 4000
   },
   "visual": {
@@ -42,12 +42,12 @@
                       "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_qtd_entrada"
+                  "Property": "m_valor_entrada"
                 }
               },
-              "queryRef": "vw_lote.m_total_entrada",
-              "nativeQueryRef": "Qtd Entrada",
-              "displayName": "Qtd Entrada"
+              "queryRef": "vw_lote.m_valor_entrada",
+              "nativeQueryRef": "Valor Total",
+              "displayName": "Valor Total"
             }
           ],
           "fieldParameters": [
@@ -78,7 +78,7 @@
                     "Entity": "vw_lote"
                   }
                 },
-                "Property": "m_qtd_entrada"
+                "Property": "m_valor_entrada"
               }
             },
             "direction": "Descending"

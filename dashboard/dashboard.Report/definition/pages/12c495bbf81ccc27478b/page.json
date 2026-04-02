@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "12c495bbf81ccc27478b",
   "displayName": "Ciclo",
-  "displayOption": "FitToPage",
+  "displayOption": "ActualSize",
   "height": 720,
-  "width": 1280,
+  "width": 1600,
   "objects": {
     "outspacePane": [
       {
@@ -19,5 +19,37 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "1f1243d310be3dec957b",
+      "target": "02151a914257e2893180",
+      "type": "DataFilter"
+    },
+    {
+      "source": "1f1243d310be3dec957b",
+      "target": "c03a360468ec362c2825",
+      "type": "DataFilter"
+    },
+    {
+      "source": "c03a360468ec362c2825",
+      "target": "02151a914257e2893180",
+      "type": "DataFilter"
+    },
+    {
+      "source": "c03a360468ec362c2825",
+      "target": "1f1243d310be3dec957b",
+      "type": "DataFilter"
+    },
+    {
+      "source": "02151a914257e2893180",
+      "target": "1f1243d310be3dec957b",
+      "type": "DataFilter"
+    },
+    {
+      "source": "02151a914257e2893180",
+      "target": "c03a360468ec362c2825",
+      "type": "DataFilter"
+    }
+  ]
 }

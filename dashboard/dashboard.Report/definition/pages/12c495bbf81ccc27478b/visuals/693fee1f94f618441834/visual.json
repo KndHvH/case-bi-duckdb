@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "693fee1f94f618441834",
   "position": {
-    "x": 318.8818447740129,
-    "y": 122.14480019121548,
-    "z": 6001,
-    "height": 55.0117802387917,
-    "width": 320.74665088380249,
-    "tabOrder": 6001
+    "x": 400,
+    "y": 121.37931034482759,
+    "z": 4000,
+    "height": 54.482758620689658,
+    "width": 400,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "textSlicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "d_sku"
+                      "Entity": "d_fornecedor"
                     }
                   },
-                  "Property": "busca_produto"
+                  "Property": "nome"
                 }
               },
-              "queryRef": "d_sku.busca_produto",
-              "nativeQueryRef": "busca_produto"
+              "queryRef": "d_fornecedor.nome",
+              "nativeQueryRef": "nome"
             }
           ]
         }
@@ -301,7 +301,7 @@
             "placeholder": {
               "expr": {
                 "Literal": {
-                  "Value": "'Buscar produto'"
+                  "Value": "'Buscar Fornecedor'"
                 }
               }
             },
@@ -530,6 +530,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "nome",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

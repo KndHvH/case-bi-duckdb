@@ -3,10 +3,10 @@
   "name": "c3b2e74cbbf834052a5c",
   "position": {
     "x": 0,
-    "y": 298.36897756632789,
+    "y": 175.55555555555554,
     "z": 3000,
-    "height": 421.44618081243812,
-    "width": 1280.1893943705256,
+    "height": 544.44444444444446,
+    "width": 1600,
     "tabOrder": 3000
   },
   "visual": {
@@ -20,30 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "vw_fefo"
+                      "Entity": "vw_lote"
                     }
                   },
                   "Property": "nf"
                 }
               },
-              "queryRef": "vw_fefo.nf",
-              "nativeQueryRef": "NF Saida",
-              "displayName": "NF Saida"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "d_cliente"
-                    }
-                  },
-                  "Property": "nome"
-                }
-              },
-              "queryRef": "d_cliente.nome",
-              "nativeQueryRef": "Cliente",
-              "displayName": "Cliente"
+              "queryRef": "vw_lote.nf",
+              "nativeQueryRef": "NF Entrada",
+              "displayName": "NF Entrada"
             },
             {
               "field": {
@@ -59,36 +44,6 @@
               "queryRef": "d_fornecedor.nome",
               "nativeQueryRef": "Fornecedor",
               "displayName": "Fornecedor"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "d_local"
-                    }
-                  },
-                  "Property": "cidade"
-                }
-              },
-              "queryRef": "d_local.cidade",
-              "nativeQueryRef": "Cidade",
-              "displayName": "Cidade"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "d_local"
-                    }
-                  },
-                  "Property": "estado"
-                }
-              },
-              "queryRef": "d_local.estado",
-              "nativeQueryRef": "Estado",
-              "displayName": "Estado"
             },
             {
               "field": {
@@ -127,47 +82,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "vw_fefo"
-                        }
-                      },
-                      "Property": "qtd_consumida"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(vw_fefo.qtd_consumida)",
-              "nativeQueryRef": "Quantidade",
-              "displayName": "Quantidade"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_fefo"
-                        }
-                      },
-                      "Property": "valor"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(vw_fefo.valor)",
-              "nativeQueryRef": "Valor total",
-              "displayName": "Valor total"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "vw_fefo"
+                          "Entity": "vw_lote"
                         }
                       },
                       "Property": "valor_unitario"
@@ -176,24 +91,114 @@
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(vw_fefo.valor_unitario)",
+              "queryRef": "Sum(vw_lote.valor_unitario)",
               "nativeQueryRef": "Valor unitário",
               "displayName": "Valor unitário"
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_qtd_entrada"
+                }
+              },
+              "queryRef": "vw_lote.m_qtd_entrada",
+              "nativeQueryRef": "Entrada",
+              "displayName": "Entrada"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_valor_entrada"
+                }
+              },
+              "queryRef": "vw_lote.m_valor_entrada",
+              "nativeQueryRef": "Valor Entrada",
+              "displayName": "Valor Entrada"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_qtd_expirada"
+                }
+              },
+              "queryRef": "vw_lote.m_qtd_expirada",
+              "nativeQueryRef": "Expirado",
+              "displayName": "Expirado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_valor_expirado"
+                }
+              },
+              "queryRef": "vw_lote.m_valor_expirado",
+              "nativeQueryRef": "Valor Expirado",
+              "displayName": "Valor Expirado"
+            },
+            {
+              "field": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "data_venda"
+                  "Property": "m_qtd_vendida"
                 }
               },
-              "queryRef": "vw_fefo.data_venda",
-              "nativeQueryRef": "Data venda",
-              "displayName": "Data venda"
+              "queryRef": "vw_fefo.m_qtd_vendida",
+              "nativeQueryRef": "Vendido",
+              "displayName": "Vendido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_qtd_estoque"
+                }
+              },
+              "queryRef": "vw_lote.m_qtd_estoque",
+              "nativeQueryRef": "Estoque final",
+              "displayName": "Estoque final"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_lote"
+                    }
+                  },
+                  "Property": "m_valor_estoque"
+                }
+              },
+              "queryRef": "vw_lote.m_valor_estoque",
+              "nativeQueryRef": "Valor Estoque",
+              "displayName": "Valor Estoque"
             }
           ]
         }
@@ -205,136 +210,18 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "vw_fefo"
+                    "Entity": "d_sku"
                   }
                 },
-                "Property": "nf"
+                "Property": "descricao"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
     },
     "objects": {
-      "columnFormatting": [
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "d_cliente.nome"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "null"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(vw_fefo.valor_unitario)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(vw_fefo.valor)"
-          }
-        },
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(vw_fefo.qtd_consumida)"
-          }
-        }
-      ],
       "total": [
         {
           "properties": {
@@ -421,35 +308,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "70D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "vw_fefo.nf"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "57D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "d_cliente.nome"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "85D"
+                  "Value": "91.2746913580247D"
                 }
               }
             }
@@ -463,35 +322,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "96D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "d_local.cidade"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "56D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "d_local.estado"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "102.31007973075383D"
+                  "Value": "127.92039760864773D"
                 }
               }
             }
@@ -505,7 +336,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "375.49988577878304D"
+                  "Value": "275.09280690694555D"
                 }
               }
             }
@@ -519,13 +350,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88D"
+                  "Value": "85D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(vw_fefo.qtd_consumida)"
+            "metadata": "vw_lote.nf"
           }
         },
         {
@@ -533,13 +364,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "135D"
+                  "Value": "88.4444440643793D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(vw_fefo.valor)"
+            "metadata": "vw_lote.m_qtd_entrada"
           }
         },
         {
@@ -547,13 +378,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101D"
+                  "Value": "120D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(vw_fefo.valor_unitario)"
+            "metadata": "vw_lote.m_qtd_expirada"
           }
         },
         {
@@ -561,13 +392,253 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "91D"
+                  "Value": "127.22222222222223D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "vw_fefo.data_venda"
+            "metadata": "vw_fefo.m_qtd_vendida"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134.88888861281458D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_estoque"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "127D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_estoque"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.2222219082554D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_expirado"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "140.55555555555554D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_entrada"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.33333239143275D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(vw_lote.valor_unitario)"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_expirado"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_expirada"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_entrada"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_entrada"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_fefo.m_qtd_vendida"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(vw_lote.valor_unitario)"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_qtd_estoque"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "vw_lote.m_valor_estoque"
           }
         }
       ]

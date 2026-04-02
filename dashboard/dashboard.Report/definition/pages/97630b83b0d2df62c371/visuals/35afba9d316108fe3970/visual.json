@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8361dbd43e2fce28b622",
+  "name": "35afba9d316108fe3970",
   "position": {
-    "x": 750.58445919029361,
-    "y": 398.13610444006878,
-    "z": 2000,
-    "height": 55.0117802387917,
-    "width": 380.420446397068,
-    "tabOrder": 2000
+    "x": 1200,
+    "y": 120,
+    "z": 8003,
+    "height": 55.555555555555557,
+    "width": 400,
+    "tabOrder": 8003
   },
   "visual": {
     "visualType": "textSlicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "d_sku"
+                      "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "busca_produto"
+                  "Property": "nf"
                 }
               },
-              "queryRef": "d_sku.busca_produto",
-              "nativeQueryRef": "busca_produto"
+              "queryRef": "vw_fefo.nf",
+              "nativeQueryRef": "nf"
             }
           ]
         }
@@ -301,7 +301,7 @@
             "placeholder": {
               "expr": {
                 "Literal": {
-                  "Value": "'Buscar produto'"
+                  "Value": "'Buscar NF Saida'"
                 }
               }
             },
@@ -340,6 +340,19 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropdown": [
+        {
+          "properties": {
+            "filterMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filter_Contains_Any'"
                 }
               }
             }
@@ -388,7 +401,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -396,6 +409,18 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

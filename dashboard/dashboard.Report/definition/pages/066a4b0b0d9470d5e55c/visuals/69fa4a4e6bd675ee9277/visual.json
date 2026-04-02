@@ -3,10 +3,10 @@
   "name": "69fa4a4e6bd675ee9277",
   "position": {
     "x": 0,
-    "y": 468.99873661207164,
+    "y": 468.53253508462421,
     "z": 2000,
-    "height": 250.81642176669436,
-    "width": 1280.1893943705256,
+    "height": 251.74882482158912,
+    "width": 1600.2367429631568,
     "tabOrder": 2000
   },
   "visual": {
@@ -15,58 +15,6 @@
       "queryState": {
         "Category": {
           "projections": [
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "d_calendar"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
-                    }
-                  },
-                  "Level": "Ano"
-                }
-              },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Ano",
-              "nativeQueryRef": "Date Ano",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "d_calendar"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Hierarquia de datas"
-                    }
-                  },
-                  "Level": "Trimestre"
-                }
-              },
-              "queryRef": "d_calendar.Date.Variation.Hierarquia de datas.Trimestre",
-              "nativeQueryRef": "Date Trimestre",
-              "active": false
-            },
             {
               "field": {
                 "HierarchyLevel": {
@@ -131,12 +79,12 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_valor_vendido"
+                  "Property": "m_tm"
                 }
               },
-              "queryRef": "vw_fefo.m_total_vendido",
-              "nativeQueryRef": "Valor Total",
-              "displayName": "Valor Total"
+              "queryRef": "vw_fefo.m_tm",
+              "nativeQueryRef": "Ticket Médio",
+              "displayName": "Ticket Médio"
             }
           ],
           "fieldParameters": [

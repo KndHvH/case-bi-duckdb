@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "a4fcb7359ef96d4a312a",
+  "name": "94d18c56ba6716030e3d",
   "position": {
-    "x": 960.37514654161782,
-    "y": 122.14480019121548,
-    "z": 5000,
-    "height": 55.0117802387917,
-    "width": 319.8142478289077,
-    "tabOrder": 5000
+    "x": 800,
+    "y": 120,
+    "z": 8004,
+    "height": 55.555555555555557,
+    "width": 400,
+    "tabOrder": 8004
   },
   "visual": {
     "visualType": "textSlicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "d_sku"
+                      "Entity": "vw_lote"
                     }
                   },
-                  "Property": "busca_produto"
+                  "Property": "nf"
                 }
               },
-              "queryRef": "d_sku.busca_produto",
-              "nativeQueryRef": "busca_produto"
+              "queryRef": "vw_lote.nf",
+              "nativeQueryRef": "nf"
             }
           ]
         }
@@ -301,7 +301,7 @@
             "placeholder": {
               "expr": {
                 "Literal": {
-                  "Value": "'Buscar produto'"
+                  "Value": "'Buscar NF Entrada'"
                 }
               }
             },

@@ -38,14 +38,10 @@ class SilverPipeline:
             CREATE TABLE d_local AS
             SELECT
                 ROW_NUMBER() OVER () AS id,
-                cidade,
-                estado
-            FROM (
-                SELECT DISTINCT
-                    UPPER(clean("CIDADE")) AS cidade,
-                    UPPER(clean("UF"))     AS estado
-                FROM raw_expedicao
-            )
+                UPPER(clean("CIDADE")) AS cidade,
+                UPPER(clean("UF"))     AS estado
+            FROM raw_expedicao
+            GROUP BY ALL
         """)
 
     def _create_d_cliente(self):
@@ -53,22 +49,20 @@ class SilverPipeline:
             CREATE TABLE d_cliente AS
             SELECT
                 ROW_NUMBER() OVER () AS id,
-                UPPER(clean(nome))   AS nome
-            FROM (
-                SELECT DISTINCT
-                    "CLIENTE" AS nome
-                FROM raw_expedicao
-            )
+                UPPER(clean("CLIENTE")) AS nome
+            FROM raw_expedicao
+            GROUP BY "CLIENTE"
+            
         """)
 
     def _create_d_fornecedor(self):
         self.conn.execute("""
             CREATE TABLE d_fornecedor AS
             SELECT
-                ROW_NUMBER() OVER ()  AS id,
-                UPPER(clean(nome))    AS nome
+                ROW_NUMBER() OVER (ORDER BY nome_clean)  AS id,
+                nome_clean                               AS nome
             FROM (
-                SELECT DISTINCT "FORNECEDOR" AS nome
+                SELECT DISTINCT UPPER(clean(nome)) AS nome_clean
                 FROM raw_recebimento
             )
         """)

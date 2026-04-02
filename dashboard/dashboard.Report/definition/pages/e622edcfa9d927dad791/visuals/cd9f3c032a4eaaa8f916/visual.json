@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "172a6ab21c7c6ec73169",
+  "name": "cd9f3c032a4eaaa8f916",
   "position": {
-    "x": 750.58445919029361,
-    "y": 398.13610444006878,
-    "z": 2000,
-    "height": 55.0117802387917,
-    "width": 380.420446397068,
-    "tabOrder": 2000
+    "x": 400,
+    "y": 116.66666666666666,
+    "z": 7001,
+    "height": 54.444444444444443,
+    "width": 400,
+    "tabOrder": 7001
   },
   "visual": {
     "visualType": "textSlicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "d_sku"
+                      "Entity": "d_fornecedor"
                     }
                   },
-                  "Property": "busca_produto"
+                  "Property": "nome"
                 }
               },
-              "queryRef": "d_sku.busca_produto",
-              "nativeQueryRef": "busca_produto"
+              "queryRef": "d_fornecedor.nome",
+              "nativeQueryRef": "nome"
             }
           ]
         }
@@ -301,7 +301,7 @@
             "placeholder": {
               "expr": {
                 "Literal": {
-                  "Value": "'Buscar produto'"
+                  "Value": "'Buscar Fornecedor'"
                 }
               }
             },
@@ -340,6 +340,19 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropdown": [
+        {
+          "properties": {
+            "filterMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filter_Contains_Any'"
                 }
               }
             }
@@ -388,7 +401,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -396,6 +409,18 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
