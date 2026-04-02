@@ -208,3 +208,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+
+**/.pbi/localSettings.json
+
+# Cache e arquivos temporários
+**.pbix
+**/StaticResources/
