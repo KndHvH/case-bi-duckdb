@@ -40,7 +40,7 @@ table metricas_saida
 		mode: import
 		source =
 				{
-				    ("Valor Total", NAMEOF('vw_fefo'[m_total_vendido]), 0),
+				    ("Valor Total", NAMEOF('vw_fefo'[m_valor_vendido]), 0),
 				    ("Qtd Vendida", NAMEOF('vw_fefo'[m_qtd_vendida]), 1),
 				    ("Ticket Médio", NAMEOF('vw_fefo'[m_tm]), 2)
 				

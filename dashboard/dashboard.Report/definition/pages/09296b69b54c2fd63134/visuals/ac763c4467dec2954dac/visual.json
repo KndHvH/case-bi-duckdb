@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 122.14480019121548,
-    "z": 4000,
+    "z": 3000,
     "height": 346.85393642085614,
     "width": 639.62849565781539,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -42,7 +42,7 @@
                       "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_total_entrada"
+                  "Property": "m_qtd_entrada"
                 }
               },
               "queryRef": "vw_lote.total_entrada",
@@ -61,7 +61,7 @@
                     "Entity": "vw_lote"
                   }
                 },
-                "Property": "m_total_entrada"
+                "Property": "m_qtd_entrada"
               }
             },
             "direction": "Descending"

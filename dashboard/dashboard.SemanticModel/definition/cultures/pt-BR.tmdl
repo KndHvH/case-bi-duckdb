@@ -797,7 +797,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_fefo",
-			          "ConceptualProperty": "m_total_vendido"
+			          "ConceptualProperty": "m_valor_vendido"
 			        }
 			      },
 			      "State": "Generated",
@@ -1405,16 +1405,6 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.7
 			          }
-			        },
-			        {
-			          "Hora Entrada": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -1699,6 +1689,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Entrada": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -1798,6 +1798,16 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Vencimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -4156,45 +4166,45 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote.total_entrada": {
+			    "vw_lote.m_total_entrada": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "vw_lote",
-			          "ConceptualProperty": "m_total_entrada"
+			          "ConceptualProperty": "m_qtd_entrada"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total entrada": {
+			          "m total entrada": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "total_entrada": {
+			          "m_total_entrada": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "aggregate entrada": {
+			          "m aggregate entrada": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.591
 			          }
 			        },
 			        {
-			          "overall entrada": {
+			          "m overall entrada": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.591
 			          }
 			        },
 			        {
@@ -4208,42 +4218,195 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "d_calendar_date_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "d_calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendar.date": {
-			          "Target": {
-			            "Entity": "d_calendar.date"
-			          }
-			        },
-			        "d_calendar.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendar.date.hierarquia_de_data"
-			          }
+			    },
+			    "vw_lote.valor_entrada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "vw_lote",
+			          "ConceptualProperty": "valor_entrada"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendar.date"
-			            },
-			            "Object": {
-			              "Role": "d_calendar.date.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dates_have_hierarquia_de_data"
+			          "valor entrada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "valor_entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
 			        }
 			      ]
 			    },
+			    "vw_lote.m_valor_total_entrada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "vw_lote",
+			          "ConceptualProperty": "m_valor_entrada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "m valor total entrada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "m_valor_total_entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "m valor aggregate entrada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "m valor overall entrada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Valor Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metricas_entrada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metricas_entrada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metricas entrada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "metrica entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "metricas_entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "metricas_entrada.metricas_entrada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metricas_entrada",
+			          "ConceptualProperty": "metricas_entrada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "metricas entrada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "metrica entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "metricas entrada name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "metrica entrada name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "metricas_entrada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "metricas_entrada.metricas_entrada_campos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metricas_entrada",
+			          "ConceptualProperty": "metricas_entrada Campos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "metricas_entrada campos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metricas_entrada.metricas_entrada_pedido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metricas_entrada",
+			          "ConceptualProperty": "metricas_entrada Pedido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "metricas_entrada pedido": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "d_local_estado_hierarquia_estado_has_d_local_estado_hierarquia_cidade": {
 			      "Binding": {
 			        "ConceptualEntity": "d_local"
@@ -5741,7 +5904,53 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "vw_lote_has_total_entrada": {
+			    "metricas_entrada_has_metricas_entrada": {
+			      "Binding": {
+			        "ConceptualEntity": "metricas_entrada"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metricas_entrada": {
+			          "Target": {
+			            "Entity": "metricas_entrada"
+			          }
+			        },
+			        "metricas_entrada.metricas_entrada": {
+			          "Target": {
+			            "Entity": "metricas_entrada.metricas_entrada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metricas_entrada"
+			            },
+			            "Object": {
+			              "Role": "metricas_entrada.metricas_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metricas_entradas_have_metricas_entradas"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "metricas_entrada"
+			            },
+			            "Name": {
+			              "Role": "metricas_entrada.metricas_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metricas_entradas_are_names_IDs_of_metricas_entradas"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_valor_total_entrada": {
 			      "Binding": {
 			        "ConceptualEntity": "vw_lote"
 			      },
@@ -5752,9 +5961,9 @@ cultureInfo pt-BR
 			            "Entity": "vw_lote"
 			          }
 			        },
-			        "vw_lote.total_entrada": {
+			        "vw_lote.m_valor_total_entrada": {
 			          "Target": {
-			            "Entity": "vw_lote.total_entrada"
+			            "Entity": "vw_lote.m_valor_total_entrada"
 			          }
 			        }
 			      },
@@ -5765,12 +5974,78 @@ cultureInfo pt-BR
 			              "Role": "vw_lote"
 			            },
 			            "Object": {
-			              "Role": "vw_lote.total_entrada"
+			              "Role": "vw_lote.m_valor_total_entrada"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "vw_lotes_have_total_entrada"
+			          "ID": "vw_lotes_have_m_valor_total_entrada"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_valor_entrada": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.valor_entrada": {
+			          "Target": {
+			            "Entity": "vw_lote.valor_entrada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.valor_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_valor_entradas"
+			        }
+			      ]
+			    },
+			    "vw_lote_has_m_total_entrada": {
+			      "Binding": {
+			        "ConceptualEntity": "vw_lote"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "vw_lote": {
+			          "Target": {
+			            "Entity": "vw_lote"
+			          }
+			        },
+			        "vw_lote.m_total_entrada": {
+			          "Target": {
+			            "Entity": "vw_lote.m_total_entrada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "vw_lote"
+			            },
+			            "Object": {
+			              "Role": "vw_lote.m_total_entrada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "vw_lotes_have_m_total_entrada"
 			        }
 			      ]
 			    },
@@ -7488,6 +7763,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "vw_fefos_have_id_saidas"
+			        }
+			      ]
+			    },
+			    "d_calendar_date_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "d_calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendar.date": {
+			          "Target": {
+			            "Entity": "d_calendar.date"
+			          }
+			        },
+			        "d_calendar.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendar.date.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendar.date"
+			            },
+			            "Object": {
+			              "Role": "d_calendar.date.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_hierarquia_de_data"
 			        }
 			      ]
 			    },

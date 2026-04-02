@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 485,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -114,11 +114,12 @@
         {
           "location": {
             "x": 1943,
-            "y": 265.75
+            "y": 289.75
           },
           "nodeIndex": "metricas_entrada",
+          "nodeLineageTag": "8a71349b-db53-4446-9ccc-93ae7773ce4f",
           "size": {
-            "height": 200,
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

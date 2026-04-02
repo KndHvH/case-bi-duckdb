@@ -92,57 +92,12 @@
         "howCreated": "Drillthrough"
       },
       {
-        "name": "f87672a729126ef0bf3d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_local"
-              }
-            },
-            "Property": "estado"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "12cc4b6488610268ae78",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_local"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
         "name": "e1846f58428430f7dec5",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
                 "Entity": "d_fornecedor"
-              }
-            },
-            "Property": "nome"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      },
-      {
-        "name": "1a331717c030336f9a0e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_cliente"
               }
             },
             "Property": "nome"
@@ -253,8 +208,6 @@
       {
         "name": "eaaf4ab48ded96009d99",
         "boundFilter": "2af1710ea8ed13e48c76",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -269,8 +222,6 @@
       {
         "name": "8dad2b17ba2b2ff48f59",
         "boundFilter": "5aced4333aa4b6ee985b",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -285,8 +236,6 @@
       {
         "name": "3b028606d48638f11771",
         "boundFilter": "1176d2c7f91013eb5bbe",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -299,42 +248,8 @@
         }
       },
       {
-        "name": "1e8afbe35412c8bea734",
-        "boundFilter": "f87672a729126ef0bf3d",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_local"
-              }
-            },
-            "Property": "estado"
-          }
-        }
-      },
-      {
-        "name": "41b72fb8deb286bf575f",
-        "boundFilter": "12cc4b6488610268ae78",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_local"
-              }
-            },
-            "Property": "cidade"
-          }
-        }
-      },
-      {
         "name": "159b9fab2524c0eda8f9",
         "boundFilter": "e1846f58428430f7dec5",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -347,26 +262,8 @@
         }
       },
       {
-        "name": "c084ad225149d57f1da4",
-        "boundFilter": "1a331717c030336f9a0e",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "d_cliente"
-              }
-            },
-            "Property": "nome"
-          }
-        }
-      },
-      {
         "name": "fa18343b8a3f5f5ae7cc",
         "boundFilter": "1c77ed0c6abef38aa16a",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "HierarchyLevel": {
             "Expression": {
@@ -392,8 +289,6 @@
       {
         "name": "eb757f64ddb1eee65138",
         "boundFilter": "e053ff8fd5017f51cbc6",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "HierarchyLevel": {
             "Expression": {
@@ -419,8 +314,6 @@
       {
         "name": "4b6eec65a1b26f41f9b6",
         "boundFilter": "6d3717bd4e2b9f97225e",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "HierarchyLevel": {
             "Expression": {
@@ -446,8 +339,6 @@
       {
         "name": "110c841d0797728d1809",
         "boundFilter": "7c9b30ece9f7284ab9c5",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
@@ -478,21 +369,6 @@
   },
   "visibility": "HiddenInViewMode",
   "visualInteractions": [
-    {
-      "source": "77398ec9bc517e590594",
-      "target": "63b47adce9e49e3bec41",
-      "type": "DataFilter"
-    },
-    {
-      "source": "63b47adce9e49e3bec41",
-      "target": "77398ec9bc517e590594",
-      "type": "DataFilter"
-    },
-    {
-      "source": "35c407d8f3b17b15e9df",
-      "target": "77398ec9bc517e590594",
-      "type": "DataFilter"
-    },
     {
       "source": "35c407d8f3b17b15e9df",
       "target": "63b47adce9e49e3bec41",

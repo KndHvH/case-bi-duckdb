@@ -38,7 +38,7 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_total_vendido"
+                  "Property": "m_valor_vendido"
                 }
               },
               "queryRef": "vw_fefo.m_total_vendido",

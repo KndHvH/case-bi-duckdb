@@ -1,27 +1,37 @@
 table metricas_entrada
-	lineageTag: 982683ce-2459-40c6-8d0b-7b44386e098a
+	lineageTag: 8a71349b-db53-4446-9ccc-93ae7773ce4f
 
-	column Value1
-		lineageTag: 184b7505-7915-4d33-b32a-56a4d145edef
+	column metricas_entrada
+		lineageTag: 3672ccea-200f-4cbc-a19d-587f5ce2aece
 		summarizeBy: none
-		isNameInferred
 		sourceColumn: [Value1]
+		sortByColumn: 'metricas_entrada Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'metricas_entrada Campos'
 
 		annotation SummarizationSetBy = Automatic
 
-	column Value2
-		lineageTag: c76e8949-30ed-4271-a530-e7e84d99faff
+	column 'metricas_entrada Campos'
+		isHidden
+		lineageTag: dbecc0dc-afdc-4f12-8b58-49ca865c7d66
 		summarizeBy: none
-		isNameInferred
 		sourceColumn: [Value2]
+		sortByColumn: 'metricas_entrada Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
 
 		annotation SummarizationSetBy = Automatic
 
-	column Value3
+	column 'metricas_entrada Pedido'
+		isHidden
 		formatString: 0
-		lineageTag: d31aaae0-d31a-42da-9666-e02ab3b7b541
+		lineageTag: a63edb4a-5fe3-485e-b042-1e98f49e83fc
 		summarizeBy: sum
-		isNameInferred
 		sourceColumn: [Value3]
 
 		annotation SummarizationSetBy = Automatic
@@ -30,10 +40,9 @@ table metricas_entrada
 		mode: import
 		source =
 				{
-				    ("Valor Total", NAMEOF('vw_lote'[m_valor_total_entrada]), 0),
-				    ("Qtd entrada", NAMEOF('vw_lote'[m_total_entrada]), 1)
-				
+				    ("Qtd Entrada", NAMEOF('vw_lote'[m_qtd_entrada]), 0),
+				    ("Valor Total", NAMEOF('vw_lote'[m_valor_entrada]), 1)
 				}
 
-	annotation PBI_Id = 0b650e78e1154bbfb7b4bc8fbd8e9cad
+	annotation PBI_Id = b397136623394119935a43ed3b9ee785
 

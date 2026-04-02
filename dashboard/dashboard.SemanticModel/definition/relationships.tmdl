@@ -28,11 +28,6 @@ relationship 32492319-086e-4bc4-8973-651d4c96dde1
 	fromColumn: vw_lote.datahora_recebimento
 	toColumn: LocalDateTable_05c4c330-f23d-4e21-b5d5-3815a2b77ef6.Date
 
-relationship 00a498e2-a2ae-49ff-ba39-40f782add014
-	joinOnDateBehavior: datePartOnly
-	fromColumn: vw_lote.data_vencimento
-	toColumn: LocalDateTable_251dbf71-9753-4c4a-9a0c-bfe308aa4f81.Date
-
 relationship a35baa9a-d249-47db-8e67-329436bd0577
 	joinOnDateBehavior: datePartOnly
 	fromColumn: d_calendar.Date
@@ -45,5 +40,10 @@ relationship 8ad0a56c-b943-989a-34ab-b51afd6c8d66
 relationship 0eecf9c5-931c-9b9b-c3d8-a79f33eec567
 	isActive: false
 	fromColumn: vw_lote.data_recebimento
+	toColumn: d_calendar.Date
+
+relationship 561e4c19-d298-ea0a-187b-4420b9bc3e5b
+	isActive: false
+	fromColumn: vw_lote.data_vencimento
 	toColumn: d_calendar.Date
 

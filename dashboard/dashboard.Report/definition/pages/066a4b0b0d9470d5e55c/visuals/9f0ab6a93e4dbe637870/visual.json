@@ -4,10 +4,10 @@
   "position": {
     "x": 874.59406549129858,
     "y": 41.025734415370081,
-    "z": 7000,
+    "z": 6000,
     "height": 55.0117802387917,
     "width": 380.420446397068,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "textSlicer",
@@ -340,6 +340,19 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropdown": [
+        {
+          "properties": {
+            "filterMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filter_Contains_Any'"
                 }
               }
             }

@@ -1,7 +1,7 @@
 table vw_fefo
 	lineageTag: ddcf8314-e111-4c21-adc6-58fd8aba89fe
 
-	measure m_total_vendido = SUM(vw_fefo[valor])
+	measure m_valor_vendido = SUM(vw_fefo[valor])
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		lineageTag: 50cedadd-51bc-4d74-b99f-5ee6f8e4271f
 

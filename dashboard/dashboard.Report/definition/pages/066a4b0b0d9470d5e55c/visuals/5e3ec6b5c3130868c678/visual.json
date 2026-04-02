@@ -4,10 +4,10 @@
   "position": {
     "x": 303.03099284080173,
     "y": 122.14480019121548,
-    "z": 5000,
+    "z": 4000,
     "height": 346.85393642085614,
     "width": 336.59750281701366,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pieChart",
@@ -67,12 +67,12 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_tm"
+                  "Property": "m_valor_vendido"
                 }
               },
-              "queryRef": "vw_fefo.m_tm",
-              "nativeQueryRef": "Ticket Médio",
-              "displayName": "Ticket Médio"
+              "queryRef": "vw_fefo.m_total_vendido",
+              "nativeQueryRef": "Valor Total",
+              "displayName": "Valor Total"
             }
           ],
           "fieldParameters": [
@@ -104,7 +104,7 @@
                     "Entity": "vw_fefo"
                   }
                 },
-                "Property": "m_tm"
+                "Property": "m_valor_vendido"
               }
             },
             "direction": "Descending"

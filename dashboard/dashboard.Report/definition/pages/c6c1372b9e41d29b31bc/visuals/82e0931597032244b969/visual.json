@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "a79b207405cc447e6073",
+  "name": "82e0931597032244b969",
   "position": {
-    "x": 151.98169794784826,
-    "y": 13.053642768526844,
-    "z": 8001,
+    "x": 140.79286128911096,
+    "y": 15.850851933211169,
+    "z": 7000,
     "height": 90.443096324793132,
     "width": 423.3109869222277,
-    "tabOrder": 8001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -504,6 +504,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Metrica",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

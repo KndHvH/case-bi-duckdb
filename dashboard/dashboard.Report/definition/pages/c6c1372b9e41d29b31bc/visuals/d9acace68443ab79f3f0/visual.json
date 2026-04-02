@@ -1,59 +1,34 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "77398ec9bc517e590594",
+  "name": "d9acace68443ab79f3f0",
   "position": {
-    "x": 600.46756735223482,
+    "x": 0,
     "y": 122.14480019121548,
-    "z": 5000,
+    "z": 4000,
     "height": 176.22417737511239,
-    "width": 679.7218270182907,
-    "tabOrder": 5000
+    "width": 600.46756735223482,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "d_local"
-                        }
-                      },
-                      "Hierarchy": "estado Hierarquia"
+                    "SourceRef": {
+                      "Entity": "d_cliente"
                     }
                   },
-                  "Level": "Estado"
+                  "Property": "nome"
                 }
               },
-              "queryRef": "d_local.estado Hierarquia.estado",
-              "nativeQueryRef": "estado Hierarquia estado",
+              "queryRef": "d_cliente.nome",
+              "nativeQueryRef": "nome",
               "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "d_local"
-                        }
-                      },
-                      "Hierarchy": "estado Hierarquia"
-                    }
-                  },
-                  "Level": "Cidade"
-                }
-              },
-              "queryRef": "d_local.estado Hierarquia.cidade",
-              "nativeQueryRef": "estado Hierarquia cidade",
-              "active": false
             }
           ]
         },
@@ -67,12 +42,12 @@
                       "Entity": "vw_fefo"
                     }
                   },
-                  "Property": "m_tm"
+                  "Property": "m_valor_vendido"
                 }
               },
-              "queryRef": "vw_fefo.m_tm",
-              "nativeQueryRef": "Ticket Médio",
-              "displayName": "Ticket Médio"
+              "queryRef": "vw_fefo.m_total_vendido",
+              "nativeQueryRef": "Valor Total",
+              "displayName": "Valor Total"
             }
           ],
           "fieldParameters": [
@@ -88,8 +63,7 @@
                 }
               },
               "index": 0,
-              "length": 1,
-              "sortDirection": "Descending"
+              "length": 1
             }
           ]
         }
@@ -104,12 +78,13 @@
                     "Entity": "vw_fefo"
                   }
                 },
-                "Property": "m_tm"
+                "Property": "m_valor_vendido"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -134,13 +109,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -159,6 +127,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -166,14 +141,14 @@
       "valueAxis": [
         {
           "properties": {
-            "show": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showAxisTitle": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -197,6 +172,32 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -232,25 +233,6 @@
                   "Value": "8D"
                 }
               }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             }
           }
         }
@@ -263,14 +245,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top locais'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Top clientes'"
                 }
               }
             },
@@ -290,39 +265,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }

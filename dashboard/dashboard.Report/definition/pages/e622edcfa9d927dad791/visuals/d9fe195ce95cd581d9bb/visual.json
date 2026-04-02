@@ -4,10 +4,10 @@
   "position": {
     "x": 647.08772009697361,
     "y": 2.797209164684324,
-    "z": 6000,
+    "z": 5000,
     "height": 111.88836658737296,
     "width": 459.67470606312389,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -20,45 +20,30 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "vw_fefo"
+                      "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_qtd_vendida"
+                  "Property": "m_qtd_entrada"
                 }
               },
-              "queryRef": "vw_fefo.m_qtd_vendida",
-              "nativeQueryRef": "Qtd vendida",
-              "displayName": "Qtd vendida"
+              "queryRef": "vw_lote.m_total_entrada",
+              "nativeQueryRef": "Qtd Entrada",
+              "displayName": "Qtd Entrada"
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "vw_fefo"
+                      "Entity": "vw_lote"
                     }
                   },
-                  "Property": "m_total_vendido"
+                  "Property": "m_valor_entrada"
                 }
               },
-              "queryRef": "vw_fefo.m_total_vendido",
+              "queryRef": "vw_lote.m_valor_total_entrada",
               "nativeQueryRef": "Valor Total",
               "displayName": "Valor Total"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "vw_fefo"
-                    }
-                  },
-                  "Property": "m_tm"
-                }
-              },
-              "queryRef": "vw_fefo.m_tm",
-              "nativeQueryRef": "Ticket Médio",
-              "displayName": "Ticket Médio"
             }
           ]
         }
@@ -70,10 +55,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "vw_fefo"
+                    "Entity": "vw_lote"
                   }
                 },
-                "Property": "m_qtd_vendida"
+                "Property": "m_qtd_entrada"
               }
             },
             "direction": "Descending"
